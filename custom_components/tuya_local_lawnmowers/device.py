@@ -130,7 +130,8 @@ class TuyaLocalDevice(object):
         # the possibilities a couple of times
         self._AUTO_CONNECTION_ATTEMPTS = len(API_PROTOCOL_VERSIONS) * 2 + 1
         self._SINGLE_PROTO_CONNECTION_ATTEMPTS = 3
-        # The number of failures from a working protocol before retrying other protocols.
+        # The number of failures from a working protocol before
+        # retrying other protocols.
         self._AUTO_FAILURE_RESET_COUNT = 10
         self._lock = Lock()
 

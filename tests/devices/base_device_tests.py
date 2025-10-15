@@ -4,7 +4,9 @@ from uuid import uuid4
 
 from homeassistant.helpers.entity import EntityCategory
 
-from custom_components.tuya_local_lawnmowers.alarm_control_panel import TuyaLocalAlarmControlPanel
+from custom_components.tuya_local_lawnmowers.alarm_control_panel import (
+    TuyaLocalAlarmControlPanel,
+)
 from custom_components.tuya_local_lawnmowers.binary_sensor import TuyaLocalBinarySensor
 from custom_components.tuya_local_lawnmowers.button import TuyaLocalButton
 from custom_components.tuya_local_lawnmowers.camera import TuyaLocalCamera
@@ -64,7 +66,9 @@ class TuyaDeviceTestCase(IsolatedAsyncioTestCase):
 
     def setUpForConfig(self, config_file, payload):
         """Perform setup tasks for every test."""
-        device_patcher = patch("custom_components.tuya_local_lawnmowers.device.TuyaLocalDevice")
+        device_patcher = patch(
+            "custom_components.tuya_local_lawnmowers.device.TuyaLocalDevice"
+        )
         self.addCleanup(device_patcher.stop)
         self.mock_device = device_patcher.start()
         self.dps = payload.copy()

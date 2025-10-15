@@ -1,2 +1,28 @@
 [tool.black]
 target-version = ["py313"]
+
+[tool.ruff]
+# Same as Black.
+line-length = 88
+
+# Assume Python 3.13.
+target-version = "py313"
+
+[tool.ruff.lint]
+# Enable Pyflakes and a subset of the pycodestyle rules.
+select = [
+    "E",  # pycodestyle errors
+    "F",  # Pyflakes
+    "I",  # isort
+]
+
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+unfixable = []
+
+# Allow unused variables when they are prefixed with an underscore.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+# Enable isort (I) rules.
+[tool.ruff.lint.isort]
+known-first-party = ["custom_components"]

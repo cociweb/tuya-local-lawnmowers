@@ -207,7 +207,8 @@ class ConfigFlowHandler(ConfigFlow, domain=DOMAIN):
                     errors["base"] = "does_not_need_hub"
                     # Fall through to reshow the form.
             else:
-                # This is an indirectly addressable device. Need to know which hub it is connected to.
+                # This is an indirectly addressable device.
+                # Need to know which hub it is connected to.
                 if user_input["hub_id"] != "None":
                     hub_choice = self.__cloud_devices[user_input["hub_id"]]
                     # Populate node_id or uuid and local_key from the child
@@ -238,14 +239,20 @@ class ConfigFlowHandler(ConfigFlow, domain=DOMAIN):
                     device_list.append(
                         SelectOptionDict(
                             value=key,
-                            label=f"{device_entry['name']} ({device_entry['product_name']})",
+                            label=(
+                                f"{device_entry['name']} "
+                                f"({device_entry['product_name']})"
+                            ),
                         )
                     )
                 else:
                     device_list.append(
                         SelectOptionDict(
                             value=key,
-                            label=f"{device_entry['name']} ({device_entry['product_name']}) OFFLINE",
+                            label=(
+                                f"{device_entry['name']} "
+                                f"({device_entry['product_name']}) OFFLINE"
+                            ),
                         )
                     )
 
@@ -288,13 +295,25 @@ class ConfigFlowHandler(ConfigFlow, domain=DOMAIN):
         )
 
     async def async_step_search(self, user_input=None):
+        # Initialize variables
+        errors = {}
+        devid_opts = {}
+        host_opts = {}
+        key_opts = {}
+        proto_opts = {}
+        polling_opts = {}
+        devcid_opts = {}
+        
         if user_input is not None:
-            # Current IP is the WAN IP which is of no use. Need to try and discover to the local IP.
-            # This scan will take 18s with the default settings. If we cannot find the device we
-            # will just leave the IP address blank and hope the user can discover the IP by other
-            # means such as router device IP assignments.
+            # Current IP is the WAN IP which is of no use.
+            # Need to try and discover to the local IP.
+            # This scan will take 18s with the default settings.
+            # If we cannot find the device we will just leave the IP address
+            # blank and hope the user can discover the IP by other means
+            # such as router device IP assignments.
             _LOGGER.debug(
-                f"Scanning network to get IP address for {self.__cloud_device.get('id', 'DEVICE_KEY_UNAVAILABLE')}."
+                "Scanning network to get IP address for %s",
+                self.__cloud_device.get('id', 'DEVICE_KEY_UNAVAILABLE')
             )
             self.__cloud_device["ip"] = ""
             try:
@@ -305,66 +324,28 @@ class ConfigFlowHandler(ConfigFlow, domain=DOMAIN):
                 local_device = {"ip": None, "version": ""}
 
             if local_device.get("ip"):
-                _LOGGER.debug(f"Found: {local_device}")
+                _LOGGER.debug("Found: %s", local_device)
                 self.__cloud_device["ip"] = local_device.get("ip")
                 self.__cloud_device["version"] = local_device.get("version")
                 if not self.__cloud_device.get(CONF_DEVICE_CID):
-                    self.__cloud_device["local_product_id"] = local_device.get(
-                        "productKey"
+                    self.device.set_detected_product_id(
+                        self.__cloud_device.get("product_id")
                     )
-            else:
-                _LOGGER.warning(
-                    f"Could not find device: {self.__cloud_device.get('id', 'DEVICE_KEY_UNAVAILABLE')}"
-                )
-            return await self.async_step_local()
-
-        return self.async_show_form(
-            step_id="search", data_schema=vol.Schema({}), errors={}, last_step=False
-        )
-
-    async def async_step_local(self, user_input=None):
-        errors = {}
-        devid_opts = {}
-        host_opts = {"default": ""}
-        key_opts = {}
-        proto_opts = {"default": 3.3}
-        polling_opts = {"default": False}
-        devcid_opts = {}
-
-        if self.__cloud_device is not None:
-            # We already have some or all of the device settings from the cloud flow. Set them into the defaults.
-            devid_opts = {"default": self.__cloud_device.get("id")}
-            host_opts = {"default": self.__cloud_device.get("ip")}
-            key_opts = {"default": self.__cloud_device.get(CONF_LOCAL_KEY)}
-            if self.__cloud_device.get("version"):
-                proto_opts = {"default": float(self.__cloud_device.get("version"))}
-            if self.__cloud_device.get(CONF_DEVICE_CID):
-                devcid_opts = {"default": self.__cloud_device.get(CONF_DEVICE_CID)}
-
-        if user_input is not None:
-            self.device = await async_test_connection(user_input, self.hass)
-            if self.device:
-                self.data = user_input
-                if self.__cloud_device:
-                    if self.__cloud_device.get("product_id"):
-                        self.device.set_detected_product_id(
-                            self.__cloud_device.get("product_id")
-                        )
-                    if self.__cloud_device.get("local_product_id"):
-                        self.device.set_detected_product_id(
-                            self.__cloud_device.get("local_product_id")
-                        )
+                if self.__cloud_device.get("local_product_id"):
+                    self.device.set_detected_product_id(
+                        self.__cloud_device.get("local_product_id")
+                    )
 
                 return await self.async_step_select_type()
-            else:
-                errors["base"] = "connection"
-                devid_opts["default"] = user_input[CONF_DEVICE_ID]
-                host_opts["default"] = user_input[CONF_HOST]
-                key_opts["default"] = user_input[CONF_LOCAL_KEY]
-                if CONF_DEVICE_CID in user_input:
-                    devcid_opts["default"] = user_input[CONF_DEVICE_CID]
-                proto_opts["default"] = user_input[CONF_PROTOCOL_VERSION]
-                polling_opts["default"] = user_input[CONF_POLL_ONLY]
+            
+            errors["base"] = "connection"
+            devid_opts["default"] = user_input[CONF_DEVICE_ID]
+            host_opts["default"] = user_input[CONF_HOST]
+            key_opts["default"] = user_input[CONF_LOCAL_KEY]
+            if CONF_DEVICE_CID in user_input:
+                devcid_opts["default"] = user_input[CONF_DEVICE_CID]
+            proto_opts["default"] = user_input[CONF_PROTOCOL_VERSION]
+            polling_opts["default"] = user_input[CONF_POLL_ONLY]
 
         return self.async_show_form(
             step_id="local",

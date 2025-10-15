@@ -18,7 +18,9 @@ from custom_components.tuya_local_lawnmowers.diagnostics import (
     async_get_config_entry_diagnostics,
     async_get_device_diagnostics,
 )
-from custom_components.tuya_local_lawnmowers.helpers.device_config import TuyaEntityConfig
+from custom_components.tuya_local_lawnmowers.helpers.device_config import (
+    TuyaEntityConfig,
+)
 
 
 @pytest.mark.asyncio

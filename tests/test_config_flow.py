@@ -9,7 +9,6 @@ from homeassistant.data_entry_flow import FlowResultType
 from pytest_homeassistant_custom_component.common import MockConfigEntry
 
 from custom_components.tuya_local_lawnmowers import (
-    async_migrate_entry,
     config_flow,
 )
 from custom_components.tuya_local_lawnmowers.const import (
@@ -87,7 +86,7 @@ async def test_init_entry(hass, bypass_data_fetch):
 
 @pytest.mark.asyncio
 async def test_flow_user_init(hass):
-    """Test the initialisation of the form in the first page of the manual config flow path."""
+    """Test the initialisation of the form in the manual config flow's first page."""
     result = await hass.config_entries.flow.async_init(
         DOMAIN, context={"source": "local"}
     )

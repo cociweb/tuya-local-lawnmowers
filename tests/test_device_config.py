@@ -359,7 +359,8 @@ class TestDeviceConfig(IsolatedAsyncioTestCase):
                 self.assertEqual(
                     entity.device_class,
                     SensorDeviceClass.ENUM,
-                    f"{cfg} {e} has mapped values but does not have a device class of enum",
+                    f"{cfg} {e} has mapped values but does not have a device class "
+                    "of enum",
                 )
             if entity.device_class == SensorDeviceClass.ENUM:
                 self.assertIsNotNone(

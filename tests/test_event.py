@@ -12,9 +12,9 @@ from custom_components.tuya_local_lawnmowers.const import (
     DOMAIN,
 )
 from custom_components.tuya_local_lawnmowers.event import (
-    TuyaLocalEvent,
     async_setup_entry,
 )
+
 
 @pytest.mark.asyncio
 async def test_init_entry_fails_if_device_has_no_event(hass):

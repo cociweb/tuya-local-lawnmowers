@@ -375,7 +375,8 @@ class TuyaEntityConfig:
             avail_dp = self.find_dps("available")
             if not avail_dp:
                 _LOGGER.warning(
-                    "Entity %s / %s has hidden: unavailable but no available dp defined",
+                    "Entity %s / %s has hidden: unavailable "
+                    "but no available dp defined",
                     self._device.config_type,
                     self.name,
                 )

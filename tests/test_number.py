@@ -11,7 +11,10 @@ from custom_components.tuya_local_lawnmowers.const import (
     CONF_TYPE,
     DOMAIN,
 )
-from custom_components.tuya_local_lawnmowers.number import TuyaLocalNumber, async_setup_entry
+from custom_components.tuya_local_lawnmowers.number import (
+    TuyaLocalNumber,
+    async_setup_entry,
+)
 
 
 @pytest.mark.asyncio
