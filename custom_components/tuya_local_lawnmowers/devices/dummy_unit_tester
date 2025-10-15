@@ -1,0 +1,9 @@
+name: Dehumidifier
+legacy_type: dehumidifier
+products:
+  - id: gynthidZEhTUCoMN
+    manufacturer: Goldair
+    model: GPDH420
+entities:
+  - entity: humidifier
+    class: dehumidifier

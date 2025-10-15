@@ -1,0 +1,7 @@
+{
+    "name": "Tuya Local - Lawnmowers",
+    "homeassistant": "2025.10.0",
+    "hacs": "2.0.5",
+    "hide_default_branch": true,
+    "render_readme": true
+}

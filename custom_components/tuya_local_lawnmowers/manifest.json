@@ -1,0 +1,22 @@
+{
+    "domain": "tuya_local_lawnmowers",
+    "name": "Tuya Local - Lawnmowers",
+    "codeowners": [
+        "@cociweb"
+    ],
+    "config_flow": true,
+    "dependencies": [],
+    "documentation": "https://github.com/cociweb/tuya-local-lawnmowers",
+    "integration_type": "device",
+    "iot_class": "local_push",
+    "issue_tracker": "https://github.com/cociweb/tuya-local-lawnmowers/issues",
+    "loggers": [
+        "tuya_local_lawnmowers",
+        "tinytuya"
+    ],
+    "requirements": [
+        "tinytuya==1.17.4",
+        "tuya-device-sharing-sdk~=0.2.1"
+    ],
+    "version": "2025.10.0"
+}
