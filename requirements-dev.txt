@@ -8,3 +8,4 @@ ruff
 tinytuya~=1.17.4
 tuya-device-sharing-sdk~=0.2.4
 yamllint
+

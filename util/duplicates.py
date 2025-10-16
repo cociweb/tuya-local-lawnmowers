@@ -4,7 +4,9 @@ import sys
 
 from common_funcs import load_config, make_sample_dps
 
-from custom_components.tuya_local_lawnmowers.helpers.device_config import possible_matches
+from custom_components.tuya_local_lawnmowers.helpers.device_config import (
+    possible_matches,
+)
 
 
 def main():

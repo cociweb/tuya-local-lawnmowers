@@ -41,7 +41,8 @@ def main():
                 ):
                     if nameonly:
                         print(
-                            f"{config}: {product['name']} may need splitting to manufacturer and model"
+                            f"{config}: {product['name']} may need splitting to "
+                            "manufacturer and model"
                         )
         else:
             if missing:

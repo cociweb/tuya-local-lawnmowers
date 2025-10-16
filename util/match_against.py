@@ -29,7 +29,8 @@ def main() -> int:
                     print(f">> dp {dp.id} is REQUIRED!!!!")
             elif not _typematch(dp.type, dps.get(dp.id)):
                 print(
-                    f">> {dp.name} type MISMATCH, expected {dp.type.__name__}, got {dps.get(dp.id)}!!!"
+                    f">> {dp.name} type MISMATCH, "
+                    f"expected {dp.type.__name__}, got {dps.get(dp.id)}!!!"
                 )
             else:
                 values = dp.values(device)
