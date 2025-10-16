@@ -2,14 +2,10 @@
 
 from unittest.mock import ANY, AsyncMock, MagicMock, patch
 
-import asyncio
 import pytest
 import voluptuous as vol
 from homeassistant.const import CONF_HOST, CONF_NAME
-from homeassistant.core import HomeAssistant
-from homeassistant.data_entry_flow import FlowResultType
 from pytest_homeassistant_custom_component.common import MockConfigEntry
-from custom_components.tuya_local_lawnmowers.helpers.device_config import get_config
 
 from custom_components.tuya_local_lawnmowers import (
     async_migrate_entry,
@@ -69,7 +65,8 @@ async def test_init_entry(hass):
     mock_device = AsyncMock()
     mock_device.has_returned_state = True
     mock_device.async_refresh = AsyncMock()
-    mock_device.get_property.return_value = "STANDBY"  # Default state for moebot_s_mower
+    # Default state for moebot_s_mower
+    mock_device.get_property.return_value = "STANDBY"
 
     # Setup mock config
     mock_config = MagicMock()
@@ -79,11 +76,26 @@ async def test_init_entry(hass):
     ]
 
     # Mock the device setup and get_config
-    with patch('custom_components.tuya_local_lawnmowers.setup_device', return_value=mock_device) as mock_setup_device, \
-         patch('homeassistant.config_entries.ConfigEntries.async_forward_entry_setups') as mock_forward, \
-         patch('homeassistant.config_entries.ConfigEntry.add_update_listener') as mock_add_update_listener, \
-         patch('custom_components.tuya_local_lawnmowers.helpers.device_config.get_config', return_value=mock_config) as mock_get_config, \
-         patch('custom_components.tuya_local_lawnmowers.async_unload_entry', return_value=True):
+    with (
+        patch(
+            'custom_components.tuya_local_lawnmowers.setup_device',
+            return_value=mock_device,
+        ),
+        patch(
+            'homeassistant.config_entries.ConfigEntries.async_forward_entry_setups'
+        ),
+        patch(
+            'homeassistant.config_entries.ConfigEntry.add_update_listener'
+        ),
+        patch(
+            'custom_components.tuya_local_lawnmowers.helpers.device_config.get_config',
+            return_value=mock_config,
+        ),
+        patch(
+            'custom_components.tuya_local_lawnmowers.async_unload_entry',
+            return_value=True,
+        ),
+    ):
 
         # Create a test config entry
         entry = MockConfigEntry(
@@ -104,7 +116,7 @@ async def test_init_entry(hass):
         entry.add_to_hass(hass)
 
         # Setup the entry
-        result = await hass.config_entries.async_setup(entry.entry_id)
+        await hass.config_entries.async_setup(entry.entry_id)
         await hass.async_block_till_done()
 
 @pytest.mark.asyncio
@@ -188,7 +200,9 @@ async def test_migrate_entry(mock_setup, hass):
 
 @pytest.mark.asyncio
 async def test_flow_user_init(hass):
-    """Test the initialisation of the form in the first page of the manual config flow path."""
+    """Test the initialisation of the form in the first page of the
+    manual config flow path.
+    """
     result = await hass.config_entries.flow.async_init(
         DOMAIN, context={"source": "local"}
     )
@@ -429,7 +443,9 @@ async def test_flow_select_type_data_valid(mock_device, hass):
 
 @pytest.mark.asyncio
 async def test_flow_choose_entities_init(hass):
-    """Test the initialisation of the form in the 3rd step of the config flow for moebot_s_mower."""
+    """Test the initialisation of the form in the 3rd step of the
+    config flow for moebot_s_mower.
+    """
     # Setup the flow with moebot_s_mower type
     with patch.dict(config_flow.ConfigFlowHandler.data, {CONF_TYPE: "moebot_s_mower"}):
         result = await hass.config_entries.flow.async_init(
@@ -492,9 +508,14 @@ async def test_flow_choose_entities_creates_config_entry(mock_test, hass, bypass
     mock_test.return_value = mock_device
 
     # Patch setup to prevent actual setup
-    with patch("custom_components.tuya_local_lawnmowers.async_setup_entry", return_value=True):
+    with patch(
+        "custom_components.tuya_local_lawnmowers.async_setup_entry",
+        return_value=True,
+    ):
         # Step 1: user
-        result = await hass.config_entries.flow.async_init(DOMAIN, context={"source": "user"})
+        result = await hass.config_entries.flow.async_init(
+            DOMAIN, context={"source": "user"}
+        )
         result = await hass.config_entries.flow.async_configure(
             result["flow_id"],
             user_input={"setup_mode": "manual"},
@@ -678,7 +699,10 @@ async def test_options_flow_fails_when_connection_fails(
     config_entry.add_to_hass(hass)
 
     # Mock the setup to succeed
-    with patch("custom_components.tuya_local_lawnmowers.async_setup_entry", return_value=True):
+    with patch(
+        "custom_components.tuya_local_lawnmowers.async_setup_entry",
+        return_value=True,
+    ):
         assert await hass.config_entries.async_setup(config_entry.entry_id)
         await hass.async_block_till_done()
 

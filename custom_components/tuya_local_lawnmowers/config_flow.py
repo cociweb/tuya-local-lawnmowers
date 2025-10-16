@@ -207,7 +207,8 @@ class ConfigFlowHandler(ConfigFlow, domain=DOMAIN):
                     errors["base"] = "does_not_need_hub"
                     # Fall through to reshow the form.
             else:
-                # This is an indirectly addressable device. Need to know which hub it is connected to.
+                # This is an indirectly addressable device.
+                # Need to know which hub it is connected to.
                 if user_input["hub_id"] != "None":
                     hub_choice = self.__cloud_devices[user_input["hub_id"]]
                     # Populate node_id or uuid and local_key from the child
@@ -238,14 +239,20 @@ class ConfigFlowHandler(ConfigFlow, domain=DOMAIN):
                     device_list.append(
                         SelectOptionDict(
                             value=key,
-                            label=f"{device_entry['name']} ({device_entry['product_name']})",
+                            label=(
+                            f"{device_entry['name']} "
+                            f"({device_entry['product_name']})"
+                        ),
                         )
                     )
                 else:
                     device_list.append(
                         SelectOptionDict(
                             value=key,
-                            label=f"{device_entry['name']} ({device_entry['product_name']}) OFFLINE",
+                            label=(
+                            f"{device_entry['name']} "
+                            f"({device_entry['product_name']}) OFFLINE"
+                        ),
                         )
                     )
 
@@ -289,12 +296,15 @@ class ConfigFlowHandler(ConfigFlow, domain=DOMAIN):
 
     async def async_step_search(self, user_input=None):
         if user_input is not None:
-            # Current IP is the WAN IP which is of no use. Need to try and discover to the local IP.
-            # This scan will take 18s with the default settings. If we cannot find the device we
-            # will just leave the IP address blank and hope the user can discover the IP by other
-            # means such as router device IP assignments.
+            # Current IP is the WAN IP which is of no use.
+            # Need to try and discover to the local IP.
+            # This scan will take 18s with the default settings.
+            # If we cannot find the device we will just leave the IP
+            # address blank and hope the user can discover the IP by
+            # other means such as router device IP assignments.
             _LOGGER.debug(
-                f"Scanning network to get IP address for {self.__cloud_device.get('id', 'DEVICE_KEY_UNAVAILABLE')}."
+                "Scanning network to get IP address for "
+                f"{self.__cloud_device.get('id', 'DEVICE_KEY_UNAVAILABLE')}."
             )
             self.__cloud_device["ip"] = ""
             try:
@@ -314,7 +324,8 @@ class ConfigFlowHandler(ConfigFlow, domain=DOMAIN):
                     )
             else:
                 _LOGGER.warning(
-                    f"Could not find device: {self.__cloud_device.get('id', 'DEVICE_KEY_UNAVAILABLE')}"
+                    "Could not find device: "
+                    f"{self.__cloud_device.get('id', 'DEVICE_KEY_UNAVAILABLE')}"
                 )
             return await self.async_step_local()
 
@@ -332,7 +343,8 @@ class ConfigFlowHandler(ConfigFlow, domain=DOMAIN):
         devcid_opts = {}
 
         if self.__cloud_device is not None:
-            # We already have some or all of the device settings from the cloud flow. Set them into the defaults.
+            # We already have some or all of the device settings from
+            # the cloud flow. Set them into the defaults.
             devid_opts = {"default": self.__cloud_device.get("id")}
             host_opts = {"default": self.__cloud_device.get("ip")}
             key_opts = {"default": self.__cloud_device.get(CONF_LOCAL_KEY)}

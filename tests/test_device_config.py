@@ -19,7 +19,7 @@ from custom_components.tuya_local_lawnmowers.helpers.device_config import (
 )
 from custom_components.tuya_local_lawnmowers.sensor import TuyaLocalSensor
 
-from .const import MOEBOT_PAYLOAD, PARKSIDE_P_MOWER_PAYLOAD
+from .const import MOEBOT_PAYLOAD
 
 PRODUCT_SCHEMA = vol.Schema(
     {

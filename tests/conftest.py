@@ -1,13 +1,9 @@
 """Configure pytest for Home Assistant core tests."""
 import asyncio
-import functools
 import os
-from unittest.mock import patch, MagicMock
+from unittest.mock import MagicMock, patch
 
 import pytest
-import pytest_asyncio
-from homeassistant.core import HomeAssistant
-from homeassistant.setup import async_setup_component
 
 # This needs to be set before the first import of homeassistant.config
 os.environ["HASS_CONFIG"] = "/tmp"
@@ -64,5 +60,7 @@ def mock_tuya_device():
 @pytest.fixture(autouse=True)
 def mock_config_flow():
     """Mock the config flow."""
-    with patch("custom_components.tuya_local_lawnmowers.config_flow.ConfigFlowHandler") as mock_cf:
+    with patch(
+        "custom_components.tuya_local_lawnmowers.config_flow.ConfigFlowHandler"
+    ) as mock_cf:
         yield mock_cf

@@ -39,7 +39,8 @@ async def test_init_entry_as_secondary(hass):
     hass.data[DOMAIN]["dummy"]["device"] = m_device
 
     await async_setup_entry(hass, entry, m_add_entities)
-    assert type(hass.data[DOMAIN]["dummy"]["button_start_fixed_mowing"]) is TuyaLocalButton
+    button = hass.data[DOMAIN]["dummy"]["button_start_fixed_mowing"]
+    assert type(button) is TuyaLocalButton
     m_add_entities.assert_called_once()
 
 

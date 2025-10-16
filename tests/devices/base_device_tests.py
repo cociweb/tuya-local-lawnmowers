@@ -3,16 +3,18 @@ from unittest.mock import AsyncMock, Mock, PropertyMock, patch
 from uuid import uuid4
 
 from homeassistant.helpers.entity import EntityCategory
-from custom_components.tuya_local_lawnmowers.helpers.device_config import get_config, possible_matches, TuyaDeviceConfig
 
 from custom_components.tuya_local_lawnmowers.binary_sensor import TuyaLocalBinarySensor
 from custom_components.tuya_local_lawnmowers.button import TuyaLocalButton
+from custom_components.tuya_local_lawnmowers.helpers.device_config import (
+    TuyaDeviceConfig,
+    possible_matches,
+)
 from custom_components.tuya_local_lawnmowers.lawn_mower import TuyaLocalLawnMower
 from custom_components.tuya_local_lawnmowers.number import TuyaLocalNumber
 from custom_components.tuya_local_lawnmowers.select import TuyaLocalSelect
 from custom_components.tuya_local_lawnmowers.sensor import TuyaLocalSensor
 from custom_components.tuya_local_lawnmowers.switch import TuyaLocalSwitch
-
 
 DEVICE_TYPES = {
     "binary_sensor": TuyaLocalBinarySensor,
@@ -29,7 +31,9 @@ class TuyaDeviceTestCase(IsolatedAsyncioTestCase):
 
     def setUpForConfig(self, config_file, payload):
         """Perform setup tasks for every test."""
-        device_patcher = patch("custom_components.tuya_local_lawnmowers.device.TuyaLocalDevice")
+        device_patcher = patch(
+            "custom_components.tuya_local_lawnmowers.device.TuyaLocalDevice"
+        )
         self.addCleanup(device_patcher.stop)
         self.mock_device = device_patcher.start()
         self.dps = payload.copy()
