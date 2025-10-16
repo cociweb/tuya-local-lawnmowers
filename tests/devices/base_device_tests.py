@@ -26,6 +26,7 @@ DEVICE_TYPES = {
     "switch": TuyaLocalSwitch,
 }
 
+
 class TuyaDeviceTestCase(IsolatedAsyncioTestCase):
     __test__ = False
 

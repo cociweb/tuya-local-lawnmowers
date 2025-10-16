@@ -240,9 +240,9 @@ class ConfigFlowHandler(ConfigFlow, domain=DOMAIN):
                         SelectOptionDict(
                             value=key,
                             label=(
-                            f"{device_entry['name']} "
-                            f"({device_entry['product_name']})"
-                        ),
+                                f"{device_entry['name']} "
+                                f"({device_entry['product_name']})"
+                            ),
                         )
                     )
                 else:
@@ -250,9 +250,9 @@ class ConfigFlowHandler(ConfigFlow, domain=DOMAIN):
                         SelectOptionDict(
                             value=key,
                             label=(
-                            f"{device_entry['name']} "
-                            f"({device_entry['product_name']}) OFFLINE"
-                        ),
+                                f"{device_entry['name']} "
+                                f"({device_entry['product_name']}) OFFLINE"
+                            ),
                         )
                     )
 

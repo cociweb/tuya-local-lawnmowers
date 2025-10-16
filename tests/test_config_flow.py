@@ -72,31 +72,26 @@ async def test_init_entry(hass):
     mock_config = MagicMock()
     mock_config.all_entities.return_value = [
         MagicMock(entity="lawn_mower", config_id="lawn_mower"),
-        MagicMock(entity="sensor", config_id="sensor_battery")
+        MagicMock(entity="sensor", config_id="sensor_battery"),
     ]
 
     # Mock the device setup and get_config
     with (
         patch(
-            'custom_components.tuya_local_lawnmowers.setup_device',
+            "custom_components.tuya_local_lawnmowers.setup_device",
             return_value=mock_device,
         ),
+        patch("homeassistant.config_entries.ConfigEntries.async_forward_entry_setups"),
+        patch("homeassistant.config_entries.ConfigEntry.add_update_listener"),
         patch(
-            'homeassistant.config_entries.ConfigEntries.async_forward_entry_setups'
-        ),
-        patch(
-            'homeassistant.config_entries.ConfigEntry.add_update_listener'
-        ),
-        patch(
-            'custom_components.tuya_local_lawnmowers.helpers.device_config.get_config',
+            "custom_components.tuya_local_lawnmowers.helpers.device_config.get_config",
             return_value=mock_config,
         ),
         patch(
-            'custom_components.tuya_local_lawnmowers.async_unload_entry',
+            "custom_components.tuya_local_lawnmowers.async_unload_entry",
             return_value=True,
         ),
     ):
-
         # Create a test config entry
         entry = MockConfigEntry(
             domain=DOMAIN,
@@ -118,6 +113,7 @@ async def test_init_entry(hass):
         # Setup the entry
         await hass.config_entries.async_setup(entry.entry_id)
         await hass.async_block_till_done()
+
 
 @pytest.mark.asyncio
 @patch("custom_components.tuya_local_lawnmowers.setup_device")
@@ -197,6 +193,7 @@ async def test_migrate_entry(mock_setup, hass):
     )
     entry.add_to_hass(hass)
     assert await async_migrate_entry(hass, entry)
+
 
 @pytest.mark.asyncio
 async def test_flow_user_init(hass):
@@ -413,19 +410,13 @@ async def test_flow_select_type_data_valid(mock_device, hass):
 
     # Start the flow at the select_type step
     flow = await hass.config_entries.flow.async_init(
-        DOMAIN,
-        context={
-            "source": "select_type",
-            "unique_id": "test_mower_123"
-        }
+        DOMAIN, context={"source": "select_type", "unique_id": "test_mower_123"}
     )
 
     # Submit the form with moebot_s_mower selected
     result = await hass.config_entries.flow.async_configure(
         flow["flow_id"],
-        user_input={
-            CONF_TYPE: "moebot_s_mower"
-        },
+        user_input={CONF_TYPE: "moebot_s_mower"},
     )
 
     # Should move to choose_entities step
@@ -449,11 +440,7 @@ async def test_flow_choose_entities_init(hass):
     # Setup the flow with moebot_s_mower type
     with patch.dict(config_flow.ConfigFlowHandler.data, {CONF_TYPE: "moebot_s_mower"}):
         result = await hass.config_entries.flow.async_init(
-            DOMAIN,
-            context={
-                "source": "choose_entities",
-                "unique_id": "mower_test_123"
-            }
+            DOMAIN, context={"source": "choose_entities", "unique_id": "mower_test_123"}
         )
 
     assert result["type"] == "form"
@@ -468,9 +455,7 @@ async def test_flow_choose_entities_init(hass):
     assert len(schema) == 1, f"Schema should only contain the name field, got: {schema}"
 
     # Test submitting the form with just the name
-    user_input = {
-        CONF_NAME: "mower_test_123"
-    }
+    user_input = {CONF_NAME: "mower_test_123"}
 
     result = await hass.config_entries.flow.async_configure(
         result["flow_id"],
@@ -493,10 +478,12 @@ async def test_flow_choose_entities_init(hass):
 @patch("custom_components.tuya_local_lawnmowers.config_flow.async_test_connection")
 async def test_flow_choose_entities_creates_config_entry(mock_test, hass, bypass_setup):
     """Test the flow ends with config entry creation for moebot_s_mower."""
+
     # Create mock device with proper type support
     class FakeType:
         def __init__(self, config_type):
             self.config_type = config_type
+
         def match_quality(self, *_):
             return 100
 
@@ -560,7 +547,6 @@ async def test_flow_choose_entities_creates_config_entry(mock_test, hass, bypass
     assert "sensor_problem" not in data
 
 
-
 @pytest.mark.asyncio
 async def test_options_flow_init(hass, bypass_data_fetch):
     """Test config flow options initialization for moebot_s_mower."""
@@ -607,6 +593,7 @@ async def test_options_flow_init(hass, bypass_data_fetch):
     # Check default value for CONF_POLL_ONLY by instantiating the schema
     form_defaults = result["data_schema"]({})
     assert form_defaults[CONF_POLL_ONLY] is False
+
 
 @pytest.mark.asyncio
 @patch("custom_components.tuya_local_lawnmowers.config_flow.async_test_connection")

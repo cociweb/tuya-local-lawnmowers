@@ -1,4 +1,5 @@
 """Configure pytest for Home Assistant core tests."""
+
 import asyncio
 import os
 from unittest.mock import MagicMock, patch
@@ -17,6 +18,7 @@ pytest_plugins = [
 # Disable tests that require a real Home Assistant instance
 collect_ignore_glob = []
 
+
 # Set up the event loop for all tests
 @pytest.fixture(autouse=True)
 def event_loop():
@@ -26,18 +28,21 @@ def event_loop():
     yield loop
     loop.close()
 
+
 # Mock the Home Assistant core
 @pytest.fixture(autouse=True)
 async def mock_hass():
     """Mock the Home Assistant core."""
+
     async def async_add_executor_job(f, *args, **kwargs):
         return await asyncio.get_event_loop().run_in_executor(
             None, lambda: f(*args, **kwargs)
         )
-    
+
     with patch("homeassistant.core.HomeAssistant") as mock_hass:
         mock_hass.return_value.async_add_executor_job = async_add_executor_job
         yield mock_hass
+
 
 # Mock the Tuya Sharing Manager
 @pytest.fixture(autouse=True)
@@ -47,6 +52,7 @@ def mock_tuya_sharing():
         mock_manager.return_value = MagicMock()
         yield mock_manager.return_value
 
+
 # Mock the Tuya Local Device
 @pytest.fixture(autouse=True)
 def mock_tuya_device():
@@ -55,6 +61,7 @@ def mock_tuya_device():
         "custom_components.tuya_local_lawnmowers.device.TuyaLocalDevice"
     ) as mock_device:
         yield mock_device
+
 
 # Mock the device config flow
 @pytest.fixture(autouse=True)
