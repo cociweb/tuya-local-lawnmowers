@@ -19,7 +19,7 @@ from custom_components.tuya_local_lawnmowers.helpers.device_config import (
 )
 from custom_components.tuya_local_lawnmowers.sensor import TuyaLocalSensor
 
-from .const import GPPH_HEATER_PAYLOAD, KOGAN_HEATER_PAYLOAD
+from .const import MOEBOT_PAYLOAD, PARKSIDE_P_MOWER_PAYLOAD
 
 PRODUCT_SCHEMA = vol.Schema(
     {
@@ -444,16 +444,16 @@ class TestDeviceConfig(IsolatedAsyncioTestCase):
     def test_match_quality(self):
         """Test the match_quality function."""
 
-        cfg = get_config("deta_fan")
-        q = cfg.match_quality({**KOGAN_HEATER_PAYLOAD, "updated_at": 0})
+        cfg = get_config("moebot_s_mower")
+        q = cfg.match_quality({**MOEBOT_PAYLOAD, "updated_at": 0})
 
-        self.assertEqual(q, 0)
-        q = cfg.match_quality({**GPPH_HEATER_PAYLOAD})
-        self.assertEqual(q, 0)
+        self.assertGreater(q, 0)
+        q = cfg.match_quality({**MOEBOT_PAYLOAD})
+        self.assertGreater(q, 0)
 
     def test_entity_find_unknown_dps_fails(self):
         """Test that finding a dps that doesn't exist fails."""
-        cfg = get_config("kogan_switch")
+        cfg = get_config("moebot_s_mower")
         for entity in cfg.all_entities():
             non_existing = entity.find_dps("missing")
             self.assertIsNone(non_existing)
@@ -462,12 +462,12 @@ class TestDeviceConfig(IsolatedAsyncioTestCase):
     async def test_dps_async_set_readonly_value_fails(self):
         """Test that setting a readonly dps fails."""
         mock_device = MagicMock()
-        cfg = get_config("aquatech_x6_water_heater")
+        cfg = get_config("moebot_s_mower")
         for entity in cfg.all_entities():
-            if entity.entity == "climate":
-                temp = entity.find_dps("temperature")
+            if entity.entity == "sensor" and entity.device_class == "battery":
+                temp = entity.find_dps("sensor")
                 with self.assertRaises(TypeError):
-                    await temp.async_set_value(mock_device, 20)
+                    await temp.async_set_value(mock_device, 50)
                 break
 
     def test_dps_values_is_empty_with_no_mapping(self):
@@ -475,17 +475,17 @@ class TestDeviceConfig(IsolatedAsyncioTestCase):
         Test that a dps with no mapping returns empty list for possible values
         """
         mock_device = MagicMock()
-        cfg = get_config("goldair_gpph_heater")
+        cfg = get_config("moebot_s_mower")
         for entity in cfg.all_entities():
-            if entity.entity == "climate":
-                temp = entity.find_dps("current_temperature")
+            if entity.entity == "sensor" and entity.device_class == "battery":
+                temp = entity.find_dps("sensor")
                 self.assertEqual(temp.values(mock_device), [])
                 break
 
     def test_config_returned(self):
         """Test that config file is returned by config"""
-        cfg = get_config("kogan_switch")
-        self.assertEqual(cfg.config, "smartplugv1.yaml")
+        cfg = get_config("moebot_s_mower")
+        self.assertEqual(cfg.config, "moebot_s_mower.yaml")
 
     def test_float_matches_ints(self):
         """Test that the _typematch function matches int values to float dps"""
@@ -663,10 +663,10 @@ class TestDeviceConfig(IsolatedAsyncioTestCase):
 
     def test_matching_with_product_id(self):
         """Test that matching with product id works"""
-        cfg = get_config("smartplugv1")
-        self.assertTrue(cfg.matches({}, ["37mnhia3pojleqfh"]))
+        cfg = get_config("moebot_s_mower")
+        self.assertTrue(cfg.matches({}, ["mvt4l2evgq2l3nkn"]))
 
     def test_matched_product_id_with_conflict_rejected(self):
         """Test that matching with product id fails when there is a conflict"""
-        cfg = get_config("smartplugv1")
-        self.assertFalse(cfg.matches({"1": "wrong_type"}, ["37mnhia3pojleqfh"]))
+        cfg = get_config("moebot_s_mower")
+        self.assertFalse(cfg.matches({"1": "wrong_type"}, ["mvt4l2evgq2l3nka"]))

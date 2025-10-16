@@ -7,8 +7,9 @@ __pycache__/
 .pytest_cache/
 /config/
 *.zip
-/.coverage
+/.coverage*
 /coverage.xml
+/test-results.xml
 *~
 \#*\#
 .\#*

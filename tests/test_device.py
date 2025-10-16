@@ -6,7 +6,7 @@ from homeassistant.const import EVENT_HOMEASSISTANT_STARTED, EVENT_HOMEASSISTANT
 
 from custom_components.tuya_local_lawnmowers.device import TuyaLocalDevice
 
-from .const import EUROM_600_HEATER_PAYLOAD
+from .const import MOEBOT_PAYLOAD
 
 
 class TestDevice(IsolatedAsyncioTestCase):
@@ -79,7 +79,7 @@ class TestDevice(IsolatedAsyncioTestCase):
 
     def test_has_returned_state(self):
         """Returns True if the device has returned its state."""
-        self.subject._cached_state = EUROM_600_HEATER_PAYLOAD
+        self.subject._cached_state = MOEBOT_PAYLOAD
         self.assertTrue(self.subject.has_returned_state)
 
         self.subject._cached_state = {"updated_at": 0}

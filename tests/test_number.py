@@ -23,7 +23,7 @@ async def test_init_entry(hass):
     entry = MockConfigEntry(
         domain=DOMAIN,
         data={
-            CONF_TYPE: "goldair_gpph_heater",
+            CONF_TYPE: "moebot_s_mower",
             CONF_DEVICE_ID: "dummy",
             CONF_PROTOCOL_VERSION: "auto",
         },
@@ -36,7 +36,7 @@ async def test_init_entry(hass):
     }
 
     await async_setup_entry(hass, entry, m_add_entities)
-    assert type(hass.data[DOMAIN]["dummy"]["number_tconfig"]) is TuyaLocalNumber
+    assert type(hass.data[DOMAIN]["dummy"]["number_running_time"]) is TuyaLocalNumber
     m_add_entities.assert_called_once()
 
 
