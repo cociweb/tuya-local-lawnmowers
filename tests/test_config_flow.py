@@ -83,7 +83,6 @@ async def test_init_entry(hass, bypass_data_fetch):
     assert hass.states.get("lock.test_child_lock")
 
 
-
 @pytest.mark.asyncio
 async def test_flow_user_init(hass):
     """Test the initialisation of the form in the manual config flow's first page."""

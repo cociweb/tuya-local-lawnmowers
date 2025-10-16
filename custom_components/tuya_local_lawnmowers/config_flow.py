@@ -303,7 +303,7 @@ class ConfigFlowHandler(ConfigFlow, domain=DOMAIN):
         proto_opts = {}
         polling_opts = {}
         devcid_opts = {}
-        
+
         if user_input is not None:
             # Current IP is the WAN IP which is of no use.
             # Need to try and discover to the local IP.
@@ -313,7 +313,7 @@ class ConfigFlowHandler(ConfigFlow, domain=DOMAIN):
             # such as router device IP assignments.
             _LOGGER.debug(
                 "Scanning network to get IP address for %s",
-                self.__cloud_device.get('id', 'DEVICE_KEY_UNAVAILABLE')
+                self.__cloud_device.get("id", "DEVICE_KEY_UNAVAILABLE"),
             )
             self.__cloud_device["ip"] = ""
             try:
@@ -337,7 +337,7 @@ class ConfigFlowHandler(ConfigFlow, domain=DOMAIN):
                     )
 
                 return await self.async_step_select_type()
-            
+
             errors["base"] = "connection"
             devid_opts["default"] = user_input[CONF_DEVICE_ID]
             host_opts["default"] = user_input[CONF_HOST]
