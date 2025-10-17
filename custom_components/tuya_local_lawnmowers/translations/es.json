@@ -136,6 +136,12 @@
             },
             "query_zones": {
                 "name": "Consultar zonas"
+            },
+            "start_docking": {
+                "name": "Iniciar retorno a la base"
+            },
+            "pause_mowing": {
+                "name": "Pausar corte"
             }
         },
         "sensor": {
@@ -143,7 +149,36 @@
                 "name": "Batería"
             },
             "problem": {
-                "name": "Problema"
+                "name": "Problema",
+                "state": {
+                    "ok": "OK",
+                    "tilted": "Inclinada",
+                    "steep": "Empinada",
+                    "raining": "Lloviendo",
+                    "low_battery": "Batería baja",
+                    "weak_signal": "Señal débil",
+                    "close_top_cover": "Cerrar tapa superior",
+                    "docked": "En la base",
+                    "undocked": "Fuera de la base",
+                    "manually_dock": "Acoplar manualmente",
+                    "finished_fixed_mowing": "Corte fijo finalizado",
+                    "disconnected": "Desconectado",
+                    "paused_charging": "Carga en pausa",
+                    "interrupted": "Interrumpido",
+                    "interrupted_fixed_mowing": "Corte fijo interrumpido",
+                    "turn_on_button": "Botón de encendido",
+                    "press_start": "Presionar iniciar",
+                    "set_30_minute_timer": "Configurar temporizador de 30 minutos",
+                    "invalid_timer": "Temporizador inválido",
+                    "charging_current_low": "Corriente de carga baja",
+                    "caught_in_rain": "Atrapado bajo la lluvia",
+                    "data_upload_failure": "Fallo al subir datos",
+                    "continue": "Continuar",
+                    "stopped": "Detenido",
+                    "ui_locked": "Interfaz bloqueada",
+                    "discharge_error": "Error de descarga",
+                    "battery_overheated": "Batería sobrecalentada"
+                }
             },
             "work_log": {
                 "name": "Registro de trabajo"

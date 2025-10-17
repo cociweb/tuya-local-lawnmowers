@@ -136,6 +136,12 @@
             },
             "query_zones": {
                 "name": "Consulter les zones"
+            },
+            "start_docking": {
+                "name": "Démarrer le retour à la base"
+            },
+            "pause_mowing": {
+                "name": "Mettre la tonte en pause"
             }
         },
         "sensor": {
@@ -143,7 +149,36 @@
                 "name": "Batterie"
             },
             "problem": {
-                "name": "Problème"
+                "name": "Problème",
+                "state": {
+                    "ok": "OK",
+                    "tilted": "Incliné",
+                    "steep": "Pente raide",
+                    "raining": "Il pleut",
+                    "low_battery": "Batterie faible",
+                    "weak_signal": "Signal faible",
+                    "close_top_cover": "Fermer le couvercle supérieur",
+                    "docked": "À la base",
+                    "undocked": "Hors de la base",
+                    "manually_dock": "Amarrage manuel",
+                    "finished_fixed_mowing": "Tonte fixe terminée",
+                    "disconnected": "Déconnecté",
+                    "paused_charging": "Charge en pause",
+                    "interrupted": "Interrompu",
+                    "interrupted_fixed_mowing": "Tonte fixe interrompue",
+                    "turn_on_button": "Appuyer sur le bouton d’alimentation",
+                    "press_start": "Appuyer sur Démarrer",
+                    "set_30_minute_timer": "Régler une minuterie de 30 minutes",
+                    "invalid_timer": "Minuterie invalide",
+                    "charging_current_low": "Courant de charge faible",
+                    "caught_in_rain": "Pris sous la pluie",
+                    "data_upload_failure": "Échec du téléversement des données",
+                    "continue": "Continuer",
+                    "stopped": "Arrêté",
+                    "ui_locked": "Interface verrouillée",
+                    "discharge_error": "Erreur de décharge",
+                    "battery_overheated": "Batterie en surchauffe"
+                }
             },
             "work_log": {
                 "name": "Journal de travail"

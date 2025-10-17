@@ -136,6 +136,12 @@
             },
             "query_zones": {
                 "name": "Sprawdź strefy"
+            },
+            "start_docking": {
+                "name": "Rozpocznij powrót do bazy"
+            },
+            "pause_mowing": {
+                "name": "Wstrzymaj koszenie"
             }
         },
         "sensor": {
@@ -143,7 +149,36 @@
                 "name": "Bateria"
             },
             "problem": {
-                "name": "Problem"
+                "name": "Problem",
+                "state": {
+                    "ok": "OK",
+                    "tilted": "Pochylony",
+                    "steep": "Strome nachylenie",
+                    "raining": "Pada deszcz",
+                    "low_battery": "Niski poziom baterii",
+                    "weak_signal": "Słaby sygnał",
+                    "close_top_cover": "Zamknij górną pokrywę",
+                    "docked": "W bazie",
+                    "undocked": "Poza bazą",
+                    "manually_dock": "Zadokuj ręcznie",
+                    "finished_fixed_mowing": "Zakończono stałe koszenie",
+                    "disconnected": "Rozłączono",
+                    "paused_charging": "Ładowanie wstrzymane",
+                    "interrupted": "Przerwano",
+                    "interrupted_fixed_mowing": "Przerwane stałe koszenie",
+                    "turn_on_button": "Naciśnij przycisk zasilania",
+                    "press_start": "Naciśnij Start",
+                    "set_30_minute_timer": "Ustaw minutnik na 30 minut",
+                    "invalid_timer": "Nieprawidłowy minutnik",
+                    "charging_current_low": "Niski prąd ładowania",
+                    "caught_in_rain": "Złapany przez deszcz",
+                    "data_upload_failure": "Błąd przesyłania danych",
+                    "continue": "Kontynuuj",
+                    "stopped": "Zatrzymano",
+                    "ui_locked": "Interfejs zablokowany",
+                    "discharge_error": "Błąd rozładowania",
+                    "battery_overheated": "Przegrzana bateria"
+                }
             },
             "work_log": {
                 "name": "Dziennik pracy"

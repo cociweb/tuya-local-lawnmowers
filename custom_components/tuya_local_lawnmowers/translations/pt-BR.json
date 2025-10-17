@@ -136,6 +136,12 @@
             },
             "query_zones": {
                 "name": "Consultar zonas"
+            },
+            "start_docking": {
+                "name": "Iniciar retorno à base"
+            },
+            "pause_mowing": {
+                "name": "Pausar corte"
             }
         },
         "sensor": {
@@ -143,7 +149,36 @@
                 "name": "Bateria"
             },
             "problem": {
-                "name": "Problema"
+                "name": "Problema",
+                "state": {
+                    "ok": "OK",
+                    "tilted": "Inclinado",
+                    "steep": "Inclinação acentuada",
+                    "raining": "Chovendo",
+                    "low_battery": "Bateria fraca",
+                    "weak_signal": "Sinal fraco",
+                    "close_top_cover": "Feche a tampa superior",
+                    "docked": "Na base",
+                    "undocked": "Fora da base",
+                    "manually_dock": "Acoplar manualmente",
+                    "finished_fixed_mowing": "Corte fixo concluído",
+                    "disconnected": "Desconectado",
+                    "paused_charging": "Carregamento em pausa",
+                    "interrupted": "Interrompido",
+                    "interrupted_fixed_mowing": "Corte fixo interrompido",
+                    "turn_on_button": "Pressione o botão de energia",
+                    "press_start": "Pressione Iniciar",
+                    "set_30_minute_timer": "Defina temporizador de 30 minutos",
+                    "invalid_timer": "Temporizador inválido",
+                    "charging_current_low": "Corrente de carga baixa",
+                    "caught_in_rain": "Pegou chuva",
+                    "data_upload_failure": "Falha no envio de dados",
+                    "continue": "Continuar",
+                    "stopped": "Parado",
+                    "ui_locked": "Interface bloqueada",
+                    "discharge_error": "Erro de descarga",
+                    "battery_overheated": "Bateria superaquecida"
+                }
             },
             "work_log": {
                 "name": "Registro de trabalho"

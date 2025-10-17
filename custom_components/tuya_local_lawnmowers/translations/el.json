@@ -136,6 +136,12 @@
             },
             "query_zones": {
                 "name": "Έλεγχος ζωνών"
+            },
+            "start_docking": {
+                "name": "Έναρξη επιστροφής στη βάση"
+            },
+            "pause_mowing": {
+                "name": "Παύση κοπής"
             }
         },
         "sensor": {
@@ -143,7 +149,36 @@
                 "name": "Μπαταρία"
             },
             "problem": {
-                "name": "Πρόβλημα"
+                "name": "Πρόβλημα",
+                "state": {
+                    "ok": "OK",
+                    "tilted": "Κεκλιμένο",
+                    "steep": "Απότομη κλίση",
+                    "raining": "Βροχή",
+                    "low_battery": "Χαμηλή μπαταρία",
+                    "weak_signal": "Ασθενές σήμα",
+                    "close_top_cover": "Κλείστε το επάνω κάλυμμα",
+                    "docked": "Στη βάση",
+                    "undocked": "Εκτός βάσης",
+                    "manually_dock": "Χειροκίνητη επιστροφή στη βάση",
+                    "finished_fixed_mowing": "Ολοκληρώθηκε η σταθερή κοπή",
+                    "disconnected": "Αποσυνδέθηκε",
+                    "paused_charging": "Η φόρτιση σε παύση",
+                    "interrupted": "Διακόπηκε",
+                    "interrupted_fixed_mowing": "Διακοπή σταθερής κοπής",
+                    "turn_on_button": "Πατήστε το κουμπί ενεργοποίησης",
+                    "press_start": "Πατήστε Έναρξη",
+                    "set_30_minute_timer": "Ορίστε χρονοδιακόπτη 30 λεπτών",
+                    "invalid_timer": "Μη έγκυρος χρονοδιακόπτης",
+                    "charging_current_low": "Χαμηλό ρεύμα φόρτισης",
+                    "caught_in_rain": "Έπιασε βροχή",
+                    "data_upload_failure": "Αποτυχία αποστολής δεδομένων",
+                    "continue": "Συνέχεια",
+                    "stopped": "Σταμάτησε",
+                    "ui_locked": "Κλειδωμένο περιβάλλον εργασίας",
+                    "discharge_error": "Σφάλμα εκφόρτισης",
+                    "battery_overheated": "Υπερθέρμανση μπαταρίας"
+                }
             },
             "work_log": {
                 "name": "Ιστορικό εργασιών"

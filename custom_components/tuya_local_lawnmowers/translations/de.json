@@ -136,6 +136,12 @@
             },
             "query_zones": {
                 "name": "Zonen abfragen"
+            },
+            "start_docking": {
+                "name": "Andocken starten"
+            },
+            "pause_mowing": {
+                "name": "Mähen pausieren"
             }
         },
         "sensor": {
@@ -143,7 +149,36 @@
                 "name": "Akku"
             },
             "problem": {
-                "name": "Problem"
+                "name": "Problem",
+                "state": {
+                    "ok": "OK",
+                    "tilted": "Geneigt",
+                    "steep": "Steil",
+                    "raining": "Regnet",
+                    "low_battery": "Niedriger Akkustand",
+                    "weak_signal": "Schwaches Signal",
+                    "close_top_cover": "Deckel schließen",
+                    "docked": "Angedockt",
+                    "undocked": "Nicht angedockt",
+                    "manually_dock": "Manuell andocken",
+                    "finished_fixed_mowing": "Fixes Mähen abgeschlossen",
+                    "disconnected": "Getrennt",
+                    "paused_charging": "Laden angehalten",
+                    "interrupted": "Unterbrochen",
+                    "interrupted_fixed_mowing": "Fixes Mähen unterbrochen",
+                    "turn_on_button": "Einschalttaste drücken",
+                    "press_start": "Start drücken",
+                    "set_30_minute_timer": "30-Minuten-Timer einstellen",
+                    "invalid_timer": "Ungültiger Timer",
+                    "charging_current_low": "Ladestrom niedrig",
+                    "caught_in_rain": "Im Regen",
+                    "data_upload_failure": "Datenübertragungsfehler",
+                    "continue": "Fortsetzen",
+                    "stopped": "Angehalten",
+                    "ui_locked": "UI gesperrt",
+                    "discharge_error": "Entladefehler",
+                    "battery_overheated": "Akku überhitzt"
+                }
             },
             "work_log": {
                 "name": "Arbeitsprotokoll"

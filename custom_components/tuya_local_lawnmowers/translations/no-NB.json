@@ -137,6 +137,12 @@
             },
             "query_zones": {
                 "name": "Spør soner"
+            },
+            "start_docking": {
+                "name": "Start docking"
+            },
+            "pause_mowing": {
+                "name": "Sett klipping på pause"
             }
         },
         "sensor": {
@@ -144,7 +150,36 @@
                 "name": "Batteri"
             },
             "problem": {
-                "name": "Problem"
+                "name": "Problem",
+                "state": {
+                    "ok": "OK",
+                    "tilted": "Vippet",
+                    "steep": "Bratt",
+                    "raining": "Regner",
+                    "low_battery": "Lavt batteri",
+                    "weak_signal": "Svak signal",
+                    "close_top_cover": "Lukk topplokket",
+                    "docked": "I dokk",
+                    "undocked": "Utenfor dokk",
+                    "manually_dock": "Dok manuelt",
+                    "finished_fixed_mowing": "Fast klippeområde fullført",
+                    "disconnected": "Frakoblet",
+                    "paused_charging": "Lading pauset",
+                    "interrupted": "Avbrutt",
+                    "interrupted_fixed_mowing": "Fast klippeområde avbrutt",
+                    "turn_on_button": "Trykk på strømknappen",
+                    "press_start": "Trykk Start",
+                    "set_30_minute_timer": "Sett 30-minutters timer",
+                    "invalid_timer": "Ugyldig timer",
+                    "charging_current_low": "Lav ladestrøm",
+                    "caught_in_rain": "Truffet av regn",
+                    "data_upload_failure": "Feil ved opplasting av data",
+                    "continue": "Fortsett",
+                    "stopped": "Stoppet",
+                    "ui_locked": "UI låst",
+                    "discharge_error": "Utladefeil",
+                    "battery_overheated": "Batteri overopphetet"
+                }
             },
             "work_log": {
                 "name": "Arbeidslogg"
