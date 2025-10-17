@@ -118,14 +118,6 @@
                     "charging_with_queued_task": "چارج ہو رہا ہے (کام قطار میں ہے)",
                     "fixed_mowing": "مقررہ گھاس کاٹنا"
                 }
-            },
-            "commands": {
-                "start_mowing": {"name": "گھاس کاٹنا شروع کریں"},
-                "pause": {"name": "روکیں"},
-                "dock": {"name": "ڈوک کریں"},
-                "fixed_mowing": {"name": "مقررہ گھاس کاٹنا"},
-                "cancel": {"name": "منسوخ کریں"},
-                "resume": {"name": "جاری رکھیں"}
             }
         },
         "button": {

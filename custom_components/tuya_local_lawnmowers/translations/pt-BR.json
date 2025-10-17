@@ -116,14 +116,6 @@
                     "charging_with_queued_task": "Carregando (tarefa na fila)",
                     "fixed_mowing": "Corte fixo"
                 }
-            },
-            "commands": {
-                "start_mowing": {"name": "Iniciar corte"},
-                "pause": {"name": "Pausar"},
-                "dock": {"name": "Retornar à base"},
-                "fixed_mowing": {"name": "Corte fixo"},
-                "cancel": {"name": "Cancelar"},
-                "resume": {"name": "Retomar"}
             }
         },
         "button": {

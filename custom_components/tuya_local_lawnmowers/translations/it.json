@@ -117,14 +117,6 @@
                     "charging_with_queued_task": "In carica (attività in coda)",
                     "fixed_mowing": "Taglio fisso"
                 }
-            },
-            "commands": {
-                "start_mowing": {"name": "Avvia taglio"},
-                "pause": {"name": "Pausa"},
-                "dock": {"name": "Torna alla base"},
-                "fixed_mowing": {"name": "Taglio fisso"},
-                "cancel": {"name": "Annulla"},
-                "resume": {"name": "Riprendi"}
             }
         },
         "button": {

@@ -116,14 +116,6 @@
                     "charging_with_queued_task": "Lädt (Aufgabe in Warteschlange)",
                     "fixed_mowing": "Fixes Mähen"
                 }
-            },
-            "commands": {
-                "start_mowing": {"name": "Mähen starten"},
-                "pause": {"name": "Pause"},
-                "dock": {"name": "Andocken"},
-                "fixed_mowing": {"name": "Fixes Mähen"},
-                "cancel": {"name": "Abbrechen"},
-                "resume": {"name": "Fortsetzen"}
             }
         },
         "button": {

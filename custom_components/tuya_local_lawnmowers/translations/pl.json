@@ -116,14 +116,6 @@
                     "charging_with_queued_task": "Ładowanie (zadanie w kolejce)",
                     "fixed_mowing": "Stałe koszenie"
                 }
-            },
-            "commands": {
-                "start_mowing": {"name": "Rozpocznij koszenie"},
-                "pause": {"name": "Wstrzymaj"},
-                "dock": {"name": "Dokuj"},
-                "fixed_mowing": {"name": "Stałe koszenie"},
-                "cancel": {"name": "Anuluj"},
-                "resume": {"name": "Wznów"}
             }
         },
         "button": {

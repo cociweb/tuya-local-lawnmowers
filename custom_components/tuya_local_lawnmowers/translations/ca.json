@@ -116,14 +116,6 @@
                     "charging_with_queued_task": "Carregant (tasca en cua)",
                     "fixed_mowing": "Tall fix"
                 }
-            },
-            "commands": {
-                "start_mowing": {"name": "Comença a tallar"},
-                "pause": {"name": "Pausa"},
-                "dock": {"name": "Torna a la base"},
-                "fixed_mowing": {"name": "Tall fix"},
-                "cancel": {"name": "Cancel·la"},
-                "resume": {"name": "Reprèn"}
             }
         },
         "button": {

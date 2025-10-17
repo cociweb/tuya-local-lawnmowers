@@ -116,14 +116,6 @@
                     "charging_with_queued_task": "充電中(排隊任務)",
                     "fixed_mowing": "固定區域割草"
                 }
-            },
-            "commands": {
-                "start_mowing": {"name": "開始割草"},
-                "pause": {"name": "暫停"},
-                "dock": {"name": "返回基站"},
-                "fixed_mowing": {"name": "固定區域割草"},
-                "cancel": {"name": "取消"},
-                "resume": {"name": "繼續"}
             }
         },
         "button": {

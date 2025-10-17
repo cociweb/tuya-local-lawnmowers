@@ -116,14 +116,6 @@
                     "charging_with_queued_task": "Charge (tâche en attente)",
                     "fixed_mowing": "Tonte fixe"
                 }
-            },
-            "commands": {
-                "start_mowing": {"name": "Démarrer la tonte"},
-                "pause": {"name": "Pause"},
-                "dock": {"name": "Retour à la base"},
-                "fixed_mowing": {"name": "Tonte fixe"},
-                "cancel": {"name": "Annuler"},
-                "resume": {"name": "Reprendre"}
             }
         },
         "button": {

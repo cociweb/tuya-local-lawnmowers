@@ -116,14 +116,6 @@
                     "charging_with_queued_task": "Mengisi Daya (tugas dalam antrian)",
                     "fixed_mowing": "Pemotongan Tetap"
                 }
-            },
-            "commands": {
-                "start_mowing": {"name": "Mulai Memotong"},
-                "pause": {"name": "Jeda"},
-                "dock": {"name": "Tambat"},
-                "fixed_mowing": {"name": "Pemotongan Tetap"},
-                "cancel": {"name": "Batal"},
-                "resume": {"name": "Lanjutkan"}
             }
         },
         "button": {

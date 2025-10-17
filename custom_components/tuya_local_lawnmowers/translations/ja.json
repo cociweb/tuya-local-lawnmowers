@@ -116,14 +116,6 @@
                     "charging_with_queued_task": "充電中（キュー待ちタスクあり）",
                     "fixed_mowing": "固定エリア芝刈り"
                 }
-            },
-            "commands": {
-                "start_mowing": {"name": "芝刈り開始"},
-                "pause": {"name": "一時停止"},
-                "dock": {"name": "ドックへ戻る"},
-                "fixed_mowing": {"name": "固定エリア芝刈り"},
-                "cancel": {"name": "キャンセル"},
-                "resume": {"name": "再開"}
             }
         },
         "button": {

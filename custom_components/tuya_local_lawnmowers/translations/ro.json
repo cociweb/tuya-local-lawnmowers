@@ -116,14 +116,6 @@
                     "charging_with_queued_task": "Se încarcă (sarcină în așteptare)",
                     "fixed_mowing": "Tăiere fixă"
                 }
-            },
-            "commands": {
-                "start_mowing": {"name": "Începe tăierea"},
-                "pause": {"name": "Pauză"},
-                "dock": {"name": "Înapoi la bază"},
-                "fixed_mowing": {"name": "Tăiere fixă"},
-                "cancel": {"name": "Anulează"},
-                "resume": {"name": "Reia"}
             }
         },
         "button": {

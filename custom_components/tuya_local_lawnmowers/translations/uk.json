@@ -116,14 +116,6 @@
                     "charging_with_queued_task": "Зарядка (завдання в черзі)",
                     "fixed_mowing": "Фіксоване косіння"
                 }
-            },
-            "commands": {
-                "start_mowing": {"name": "Почати косіння"},
-                "pause": {"name": "Пауза"},
-                "dock": {"name": "На базу"},
-                "fixed_mowing": {"name": "Фіксоване косіння"},
-                "cancel": {"name": "Скасувати"},
-                "resume": {"name": "Продовжити"}
             }
         },
         "button": {

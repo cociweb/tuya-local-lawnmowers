@@ -117,14 +117,6 @@
                     "charging_with_queued_task": "Lader (oppgave i kø)",
                     "fixed_mowing": "Fast klippeområde"
                 }
-            },
-            "commands": {
-                "start_mowing": {"name": "Start klipping"},
-                "pause": {"name": "Pause"},
-                "dock": {"name": "Til dokk"},
-                "fixed_mowing": {"name": "Fast klippeområde"},
-                "cancel": {"name": "Avbryt"},
-                "resume": {"name": "Fortsett"}
             }
         },
         "button": {

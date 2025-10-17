@@ -116,14 +116,6 @@
                     "charging_with_queued_task": "Charging (queued task)",
                     "fixed_mowing": "Fixed mowing"
                 }
-            },
-            "commands": {
-                "start_mowing": {"name": "Start mowing"},
-                "pause": {"name": "Pause"},
-                "dock": {"name": "Dock"},
-                "fixed_mowing": {"name": "Fixed mowing"},
-                "cancel": {"name": "Cancel"},
-                "resume": {"name": "Resume"}
             }
         },
         "button": {

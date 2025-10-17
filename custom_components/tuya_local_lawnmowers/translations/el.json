@@ -116,14 +116,6 @@
                     "charging_with_queued_task": "Φόρτιση (εκκρεμής εργασία)",
                     "fixed_mowing": "Σταθερή κοπή"
                 }
-            },
-            "commands": {
-                "start_mowing": {"name": "Έναρξη κοπής"},
-                "pause": {"name": "Παύση"},
-                "dock": {"name": "Επιστροφή στη βάση"},
-                "fixed_mowing": {"name": "Σταθερή κοπή"},
-                "cancel": {"name": "Ακύρωση"},
-                "resume": {"name": "Συνέχιση"}
             }
         },
         "button": {

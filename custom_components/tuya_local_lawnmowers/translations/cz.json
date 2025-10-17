@@ -116,14 +116,6 @@
                     "charging_with_queued_task": "Dobíjení (čekající úkol)",
                     "fixed_mowing": "Pevné sekání"
                 }
-            },
-            "commands": {
-                "start_mowing": {"name": "Začít sekat"},
-                "pause": {"name": "Pozastavit"},
-                "dock": {"name": "Dokovat"},
-                "fixed_mowing": {"name": "Pevné sekání"},
-                "cancel": {"name": "Zrušit"},
-                "resume": {"name": "Pokračovat"}
             }
         },
         "button": {

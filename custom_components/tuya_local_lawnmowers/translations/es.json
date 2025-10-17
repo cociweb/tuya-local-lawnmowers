@@ -116,14 +116,6 @@
                     "charging_with_queued_task": "Cargando (tarea en cola)",
                     "fixed_mowing": "Corte fijo"
                 }
-            },
-            "commands": {
-                "start_mowing": {"name": "Comenzar a cortar"},
-                "pause": {"name": "Pausar"},
-                "dock": {"name": "Volver a la base"},
-                "fixed_mowing": {"name": "Corte fijo"},
-                "cancel": {"name": "Cancelar"},
-                "resume": {"name": "Reanudar"}
             }
         },
         "button": {
