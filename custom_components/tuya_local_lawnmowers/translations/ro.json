@@ -136,6 +136,12 @@
             },
             "query_zones": {
                 "name": "Interoghează zonele"
+            },
+            "start_docking": {
+                "name": "Începe revenirea la bază"
+            },
+            "pause_mowing": {
+                "name": "Pauză tăiere"
             }
         },
         "sensor": {
@@ -143,7 +149,36 @@
                 "name": "Baterie"
             },
             "problem": {
-                "name": "Problemă"
+                "name": "Problemă",
+                "state": {
+                    "ok": "OK",
+                    "tilted": "Înclinată",
+                    "steep": "Pantă abruptă",
+                    "raining": "Plouă",
+                    "low_battery": "Baterie scăzută",
+                    "weak_signal": "Semnal slab",
+                    "close_top_cover": "Închideți capacul superior",
+                    "docked": "În bază",
+                    "undocked": "În afara bazei",
+                    "manually_dock": "Andocare manuală",
+                    "finished_fixed_mowing": "Tăiere fixă finalizată",
+                    "disconnected": "Deconectat",
+                    "paused_charging": "Încărcare în pauză",
+                    "interrupted": "Întrerupt",
+                    "interrupted_fixed_mowing": "Tăiere fixă întreruptă",
+                    "turn_on_button": "Apăsați butonul de pornire",
+                    "press_start": "Apăsați Start",
+                    "set_30_minute_timer": "Setați un cronometru de 30 de minute",
+                    "invalid_timer": "Cronometru invalid",
+                    "charging_current_low": "Curent de încărcare scăzut",
+                    "caught_in_rain": "Prins de ploaie",
+                    "data_upload_failure": "Eroare la încărcarea datelor",
+                    "continue": "Continuați",
+                    "stopped": "Oprit",
+                    "ui_locked": "Interfață blocată",
+                    "discharge_error": "Eroare de descărcare",
+                    "battery_overheated": "Baterie supraîncălzită"
+                }
             },
             "work_log": {
                 "name": "Jurnal de activitate"

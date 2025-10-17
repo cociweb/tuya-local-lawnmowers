@@ -136,6 +136,12 @@
             },
             "query_zones": {
                 "name": "Consulta les zones"
+            },
+            "start_docking": {
+                "name": "Iniciar retorn a la base"
+            },
+            "pause_mowing": {
+                "name": "Posar en pausa el tall"
             }
         },
         "sensor": {
@@ -143,7 +149,36 @@
                 "name": "Bateria"
             },
             "problem": {
-                "name": "Problema"
+                "name": "Problema",
+                "state": {
+                    "ok": "OK",
+                    "tilted": "Inclinat",
+                    "steep": "Pendent pronunciat",
+                    "raining": "Plovent",
+                    "low_battery": "Bateria baixa",
+                    "weak_signal": "Senyal feble",
+                    "close_top_cover": "Tancar la tapa superior",
+                    "docked": "A la base",
+                    "undocked": "Fora de la base",
+                    "manually_dock": "Acoblar manualment",
+                    "finished_fixed_mowing": "Tall fix completat",
+                    "disconnected": "Desconnectat",
+                    "paused_charging": "Càrrega en pausa",
+                    "interrupted": "Interromput",
+                    "interrupted_fixed_mowing": "Tall fix interromput",
+                    "turn_on_button": "Premeu el botó d'encesa",
+                    "press_start": "Premeu Inicia",
+                    "set_30_minute_timer": "Configurar temporitzador de 30 minuts",
+                    "invalid_timer": "Temporitzador invàlid",
+                    "charging_current_low": "Corrent de càrrega baix",
+                    "caught_in_rain": "Enxampat per la pluja",
+                    "data_upload_failure": "Error de càrrega de dades",
+                    "continue": "Continuar",
+                    "stopped": "Aturat",
+                    "ui_locked": "Interfície bloquejada",
+                    "discharge_error": "Error de descàrrega",
+                    "battery_overheated": "Bateria sobreescalfada"
+                }
             },
             "work_log": {
                 "name": "Historial"

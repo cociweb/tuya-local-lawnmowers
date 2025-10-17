@@ -136,6 +136,12 @@
             },
             "query_zones": {
                 "name": "查詢區域"
+            },
+            "start_docking": {
+                "name": "開始返回基站"
+            },
+            "pause_mowing": {
+                "name": "暫停割草"
             }
         },
         "sensor": {
@@ -143,7 +149,36 @@
                 "name": "電池"
             },
             "problem": {
-                "name": "問題"
+                "name": "問題",
+                "state": {
+                    "ok": "正常",
+                    "tilted": "傾斜",
+                    "steep": "坡度大",
+                    "raining": "下雨",
+                    "low_battery": "電量低",
+                    "weak_signal": "訊號弱",
+                    "close_top_cover": "請關閉上蓋",
+                    "docked": "已停靠",
+                    "undocked": "未停靠",
+                    "manually_dock": "手動停靠",
+                    "finished_fixed_mowing": "固定區域割草完成",
+                    "disconnected": "已斷開",
+                    "paused_charging": "充電已暫停",
+                    "interrupted": "已中斷",
+                    "interrupted_fixed_mowing": "固定割草已中斷",
+                    "turn_on_button": "按下電源按鈕",
+                    "press_start": "按下開始",
+                    "set_30_minute_timer": "設定30分鐘計時器",
+                    "invalid_timer": "無效計時器",
+                    "charging_current_low": "充電電流過低",
+                    "caught_in_rain": "遇雨",
+                    "data_upload_failure": "資料上傳失敗",
+                    "continue": "繼續",
+                    "stopped": "已停止",
+                    "ui_locked": "介面已鎖定",
+                    "discharge_error": "放電錯誤",
+                    "battery_overheated": "電池過熱"
+                }
             },
             "work_log": {
                 "name": "工作記錄"

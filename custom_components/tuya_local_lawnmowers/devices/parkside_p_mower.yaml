@@ -5,6 +5,7 @@ products:
     model: PMRDA 20-Li
 entities:
   - entity: lawn_mower
+    translation_key: activity
     dps:
       - id: 101
         name: activity
@@ -72,7 +73,8 @@ entities:
         optional: true
   - entity: button
     name: Start mowing
-    icon: "mdi:mower-on"
+    translation_key: start_mowing
+    icon: "mdi:play"
     dps:
       - id: 115
         type: string
@@ -83,7 +85,8 @@ entities:
             value: true
   - entity: button
     name: Start fixed mowing
-    icon: "mdi:mower-on"
+    translation_key: start_fixed_mowing
+    icon: "mdi:map-marker-radius"
     dps:
       - id: 115
         type: string
@@ -93,8 +96,9 @@ entities:
           - dps_val: StartFixedMowing
             value: true
   - entity: button
+    translation_key: pause_mowing
     name: Pause mowing
-    icon: "mdi:mower"
+    icon: "mdi:pause"
     dps:
       - id: 115
         type: string
@@ -104,8 +108,9 @@ entities:
           - dps_val: PauseWork
             value: true
   - entity: button
+    translation_key: cancel_mowing
     name: Cancel mowing
-    icon: "mdi:mower"
+    icon: "mdi:stop"
     dps:
       - id: 115
         type: string
@@ -115,8 +120,9 @@ entities:
           - dps_val: CancelWork
             value: true
   - entity: button
+    translation_key: start_docking
     name: Start docking
-    icon: "mdi:mower-on"
+    icon: "mdi:home"
     dps:
       - id: 115
         type: string
@@ -126,8 +132,9 @@ entities:
           - dps_val: StartReturnStation
             value: true
   - entity: button
+    translation_key: continue_mowing
     name: Continue mowing
-    icon: "mdi:mower-on"
+    icon: "mdi:play"
     dps:
       - id: 115
         type: string
@@ -137,6 +144,7 @@ entities:
           - dps_val: ContinueWork
             value: true
   - entity: sensor
+    translation_key: battery
     class: battery
     dps:
       - id: 6
@@ -145,6 +153,7 @@ entities:
         unit: "%"
         class: measurement
   - entity: binary_sensor
+    translation_key: problem
     class: problem
     category: diagnostic
     dps:
@@ -168,7 +177,7 @@ entities:
         name: error_log
         optional: true
   - entity: sensor
-    name: Problem
+    translation_key: problem
     icon: "mdi:robot-mower-outline"
     icon_priority: 2
     class: enum
@@ -265,6 +274,7 @@ entities:
         name: raw_problem
         type: string
   - entity: switch
+    translation_key: rain_mode
     name: Rain mode
     icon: "mdi:weather-pouring"
     category: config
@@ -273,6 +283,7 @@ entities:
         type: boolean
         name: switch
   - entity: number
+    translation_key: running_time
     name: Running time
     category: config
     icon: "mdi:clock"
@@ -285,15 +296,7 @@ entities:
           min: 1
           max: 24
   - entity: button
-    name: Clear schedule
-    icon: "mdi:calendar-remove"
-    category: config
-    dps:
-      - id: 107
-        type: boolean
-        name: button
-        optional: true
-  - entity: button
+    translation_key: query_schedule
     name: Query schedule
     icon: "mdi:calendar-refresh"
     category: config
@@ -303,6 +306,7 @@ entities:
         name: button
         optional: true
   - entity: button
+    translation_key: query_zones
     name: Query zones
     icon: "mdi:map-search"
     category: config
@@ -312,6 +316,7 @@ entities:
         name: button
         optional: true
   - entity: binary_sensor
+    translation_key: cover
     name: Cover
     category: diagnostic
     dps:
@@ -320,6 +325,7 @@ entities:
         name: sensor
         optional: true
   - entity: switch
+    translation_key: hedgehog_protection
     name: Hedgehog protection
     icon: "mdi:account-group"
     category: config

@@ -136,6 +136,12 @@
             },
             "query_zones": {
                 "name": "Dotaz na zóny"
+            },
+            "start_docking": {
+                "name": "Zahájit návrat do stanice"
+            },
+            "pause_mowing": {
+                "name": "Pozastavit sečení"
             }
         },
         "sensor": {
@@ -143,7 +149,36 @@
                 "name": "Baterie"
             },
             "problem": {
-                "name": "Problém"
+                "name": "Problém",
+                "state": {
+                    "ok": "OK",
+                    "tilted": "Nakloněno",
+                    "steep": "Strmý svah",
+                    "raining": "Prší",
+                    "low_battery": "Nízká baterie",
+                    "weak_signal": "Slabý signál",
+                    "close_top_cover": "Zavřete horní kryt",
+                    "docked": "V dokovací stanici",
+                    "undocked": "Mimo stanici",
+                    "manually_dock": "Ruční andockování",
+                    "finished_fixed_mowing": "Pevné sečení dokončeno",
+                    "disconnected": "Odpojeno",
+                    "paused_charging": "Nabíjení pozastaveno",
+                    "interrupted": "Přerušeno",
+                    "interrupted_fixed_mowing": "Pevné sečení přerušeno",
+                    "turn_on_button": "Stiskněte tlačítko napájení",
+                    "press_start": "Stiskněte Start",
+                    "set_30_minute_timer": "Nastavte 30minutový časovač",
+                    "invalid_timer": "Neplatný časovač",
+                    "charging_current_low": "Nízký nabíjecí proud",
+                    "caught_in_rain": "Zastihnut deštěm",
+                    "data_upload_failure": "Chyba nahrávání dat",
+                    "continue": "Pokračovat",
+                    "stopped": "Zastaveno",
+                    "ui_locked": "UI uzamčeno",
+                    "discharge_error": "Chyba vybíjení",
+                    "battery_overheated": "Baterie přehřátá"
+                }
             },
             "work_log": {
                 "name": "Záznam práce"

@@ -136,6 +136,12 @@
             },
             "query_zones": {
                 "name": "Запитване за зони"
+            },
+            "start_docking": {
+                "name": "Стартиране на докинг"
+            },
+            "pause_mowing": {
+                "name": "Пауза на косенето"
             }
         },
         "sensor": {
@@ -143,7 +149,36 @@
                 "name": "Акумулатор"
             },
             "problem": {
-                "name": "Проблем"
+                "name": "Проблем",
+                "state": {
+                    "ok": "OK",
+                    "tilted": "Наклонен",
+                    "steep": "Стръмен",
+                    "raining": "Вали",
+                    "low_battery": "Нисък заряд на батерията",
+                    "weak_signal": "Слаб сигнал",
+                    "close_top_cover": "Затворете горния капак",
+                    "docked": "В зарядна станция",
+                    "undocked": "Извън станцията",
+                    "manually_dock": "Ръчно докинг",
+                    "finished_fixed_mowing": "Фиксирано косене завършено",
+                    "disconnected": "Прекъснато",
+                    "paused_charging": "Зареждането е паузирано",
+                    "interrupted": "Прекъснато",
+                    "interrupted_fixed_mowing": "Фиксираното косене е прекъснато",
+                    "turn_on_button": "Натиснете бутона за включване",
+                    "press_start": "Натиснете Старт",
+                    "set_30_minute_timer": "Задайте 30-минутен таймер",
+                    "invalid_timer": "Невалиден таймер",
+                    "charging_current_low": "Нисък заряден ток",
+                    "caught_in_rain": "Заваля дъжд",
+                    "data_upload_failure": "Грешка при качване на данни",
+                    "continue": "Продължи",
+                    "stopped": "Спряно",
+                    "ui_locked": "UI заключен",
+                    "discharge_error": "Грешка при разряд",
+                    "battery_overheated": "Прегряла батерия"
+                }
             },
             "work_log": {
                 "name": "Дневник на работа"

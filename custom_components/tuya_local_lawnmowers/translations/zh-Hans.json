@@ -136,6 +136,12 @@
             },
             "query_zones": {
                 "name": "查询区域"
+            },
+            "start_docking": {
+                "name": "开始返回基站"
+            },
+            "pause_mowing": {
+                "name": "暂停割草"
             }
         },
         "sensor": {
@@ -143,7 +149,36 @@
                 "name": "电池"
             },
             "problem": {
-                "name": "问题"
+                "name": "问题",
+                "state": {
+                    "ok": "正常",
+                    "tilted": "倾斜",
+                    "steep": "坡度大",
+                    "raining": "下雨",
+                    "low_battery": "电量低",
+                    "weak_signal": "信号弱",
+                    "close_top_cover": "请关闭上盖",
+                    "docked": "已停靠",
+                    "undocked": "未停靠",
+                    "manually_dock": "手动停靠",
+                    "finished_fixed_mowing": "固定区域割草完成",
+                    "disconnected": "已断开",
+                    "paused_charging": "充电已暂停",
+                    "interrupted": "已中断",
+                    "interrupted_fixed_mowing": "固定割草已中断",
+                    "turn_on_button": "按下电源按钮",
+                    "press_start": "按下开始",
+                    "set_30_minute_timer": "设置30分钟定时",
+                    "invalid_timer": "无效定时器",
+                    "charging_current_low": "充电电流过低",
+                    "caught_in_rain": "遇雨",
+                    "data_upload_failure": "数据上传失败",
+                    "continue": "继续",
+                    "stopped": "已停止",
+                    "ui_locked": "界面已锁定",
+                    "discharge_error": "放电错误",
+                    "battery_overheated": "电池过热"
+                }
             },
             "work_log": {
                 "name": "工作日志"

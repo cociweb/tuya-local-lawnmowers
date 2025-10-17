@@ -137,6 +137,12 @@
             },
             "query_zones": {
                 "name": "Zónák lekérdezése"
+            },
+            "start_docking": {
+                "name": "Dokkolás indítása"
+            },
+            "pause_mowing": {
+                "name": "Fűnyírás szünetel"
             }
         },
         "sensor": {
@@ -144,7 +150,36 @@
                 "name": "Akkumulátor"
             },
             "problem": {
-                "name": "Probléma"
+                "name": "Probléma",
+                "state": {
+                    "ok": "OK",
+                    "tilted": "Megemelt",
+                    "steep": "Fényes",
+                    "raining": "Esik",
+                    "low_battery": "Alacsony akkumulátor",
+                    "weak_signal": "Gyenge Jel",
+                    "close_top_cover": "Fedél zárás",
+                    "docked": "Dokkolva",
+                    "undocked": "Nincs dokkolva",
+                    "manually_dock": "Manuális dokkolás",
+                    "finished_fixed_mowing": "Fixpontos nyírás befejezve",
+                    "disconnected": "Leválasztva",
+                    "paused_charging": "Szüneteltetett töltés",
+                    "interrupted": "Megszakított",
+                    "interrupted_fixed_mowing": "Megszakított fixpontos nyírás",
+                    "turn_on_button": "Bekapcsoló gomb",
+                    "press_start": "Indító gomb megnyomása",
+                    "set_30_minute_timer": "30 perc időzítő beállítása",
+                    "invalid_timer": "Érvénytelen időzítő",
+                    "charging_current_low": "Töltési feszültség alacsony",
+                    "caught_in_rain": "Esőben",
+                    "data_upload_failure": "Adat feltöltési hiba",
+                    "continue": "Folytatás",
+                    "stopped": "Leállítva",
+                    "ui_locked": "UI zárolva",
+                    "discharge_error": "Kisülési hiba",
+                    "battery_overheated": "Akkumulátor túlhevülve"
+                }
             },
             "work_log": {
                 "name": "Munkanapló"

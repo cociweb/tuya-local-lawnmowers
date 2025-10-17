@@ -5,6 +5,7 @@ products:
     model: S20
 entities:
   - entity: lawn_mower
+    translation_key: activity
     dps:
       - id: 101
         name: activity
@@ -74,6 +75,7 @@ entities:
         name: zones
         optional: true
   - entity: button
+    translation_key: start_fixed_mowing
     name: Start fixed mowing
     icon: "mdi:mower-on"
     dps:
@@ -85,6 +87,7 @@ entities:
           - dps_val: StartFixedMowing
             value: true
   - entity: button
+    translation_key: cancel_mowing
     name: Cancel mowing
     icon: "mdi:mower"
     dps:
@@ -96,6 +99,7 @@ entities:
           - dps_val: CancelWork
             value: true
   - entity: button
+    translation_key: continue_mowing
     name: Continue mowing
     icon: "mdi:mower-on"
     dps:
@@ -107,6 +111,7 @@ entities:
           - dps_val: ContinueWork
             value: true
   - entity: sensor
+    translation_key: battery
     class: battery
     dps:
       - id: 6
@@ -115,6 +120,7 @@ entities:
         unit: "%"
         class: measurement
   - entity: binary_sensor
+    translation_key: problem
     class: problem
     category: diagnostic
     dps:
@@ -138,6 +144,7 @@ entities:
         name: error_log
         optional: true
   - entity: sensor
+    translation_key: problem
     name: Problem
     icon: "mdi:robot-mower-outline"
     icon_priority: 2
@@ -226,6 +233,7 @@ entities:
             value: UI locked
             icon: "mdi:hand-back-right-off"
   - entity: switch
+    translation_key: rain_mode
     name: Rain mode
     icon: "mdi:weather-pouring"
     category: config
@@ -234,6 +242,7 @@ entities:
         type: boolean
         name: switch
   - entity: number
+    translation_key: running_time
     name: Running time
     category: config
     icon: "mdi:clock"
@@ -246,6 +255,7 @@ entities:
           min: 1
           max: 24
   - entity: button
+    translation_key: clear_schedule
     name: Clear schedule
     icon: "mdi:calendar-remove"
     category: config
@@ -255,6 +265,7 @@ entities:
         name: button
         optional: true
   - entity: button
+    translation_key: query_schedule
     name: Query schedule
     icon: "mdi:calendar-refresh"
     category: config
@@ -264,6 +275,7 @@ entities:
         name: button
         optional: true
   - entity: button
+    translation_key: query_zones
     name: Query zones
     icon: "mdi:map-search"
     category: config
@@ -273,6 +285,7 @@ entities:
         name: button
         optional: true
   - entity: select
+    translation_key: mowing_mode
     name: Mowing mode
     icon: "mdi:mower"
     category: config
@@ -287,6 +300,7 @@ entities:
           - dps_val: GardenMode
             value: Garden
   - entity: binary_sensor
+    translation_key: cover
     name: Cover
     category: diagnostic
     dps:
@@ -295,6 +309,7 @@ entities:
         name: sensor
         optional: true
   - entity: switch
+    translation_key: hedgehog_protection
     name: Hedgehog protection
     icon: "mdi:account-group"
     category: config
@@ -304,6 +319,7 @@ entities:
         name: switch
         optional: true
   - entity: switch
+    translation_key: backward_blade_stop
     name: Backward blade stop
     icon: "mdi:saw-blade"
     category: config

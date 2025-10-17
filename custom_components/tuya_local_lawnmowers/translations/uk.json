@@ -136,6 +136,12 @@
             },
             "query_zones": {
                 "name": "Запит зон"
+            },
+            "start_docking": {
+                "name": "Почати повернення на базу"
+            },
+            "pause_mowing": {
+                "name": "Призупинити косіння"
             }
         },
         "sensor": {
@@ -143,7 +149,36 @@
                 "name": "Акумулятор"
             },
             "problem": {
-                "name": "Проблема"
+                "name": "Проблема",
+                "state": {
+                    "ok": "OK",
+                    "tilted": "Нахилено",
+                    "steep": "Крутий схил",
+                    "raining": "Дощ",
+                    "low_battery": "Низький заряд батареї",
+                    "weak_signal": "Слабкий сигнал",
+                    "close_top_cover": "Закрийте верхню кришку",
+                    "docked": "На базі",
+                    "undocked": "Поза базою",
+                    "manually_dock": "Ручне докування",
+                    "finished_fixed_mowing": "Фіксоване косіння завершено",
+                    "disconnected": "Відключено",
+                    "paused_charging": "Заряджання призупинено",
+                    "interrupted": "Перервано",
+                    "interrupted_fixed_mowing": "Фіксоване косіння перервано",
+                    "turn_on_button": "Натисніть кнопку живлення",
+                    "press_start": "Натисніть Старт",
+                    "set_30_minute_timer": "Встановіть таймер на 30 хвилин",
+                    "invalid_timer": "Недійсний таймер",
+                    "charging_current_low": "Низький зарядний струм",
+                    "caught_in_rain": "Потрапив під дощ",
+                    "data_upload_failure": "Помилка завантаження даних",
+                    "continue": "Продовжити",
+                    "stopped": "Зупинено",
+                    "ui_locked": "Інтерфейс заблоковано",
+                    "discharge_error": "Помилка розряджання",
+                    "battery_overheated": "Перегрів батареї"
+                }
             },
             "work_log": {
                 "name": "Журнал роботи"

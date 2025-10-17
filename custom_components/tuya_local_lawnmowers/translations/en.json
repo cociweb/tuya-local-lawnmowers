@@ -136,6 +136,12 @@
             },
             "query_zones": {
                 "name": "Query zones"
+            },
+            "start_docking": {
+                "name": "Start docking"
+            },
+            "pause_mowing": {
+                "name": "Pause mowing"
             }
         },
         "sensor": {
@@ -143,7 +149,36 @@
                 "name": "Battery"
             },
             "problem": {
-                "name": "Problem"
+                "name": "Problem",
+                "state": {
+                    "ok": "OK",
+                    "tilted": "Tilted",
+                    "steep": "Steep",
+                    "raining": "Raining",
+                    "low_battery": "Low battery",
+                    "weak_signal": "Weak signal",
+                    "close_top_cover": "Close top cover",
+                    "docked": "Docked",
+                    "undocked": "Undocked",
+                    "manually_dock": "Manually dock",
+                    "finished_fixed_mowing": "Finished fixed mowing",
+                    "disconnected": "Disconnected",
+                    "paused_charging": "Paused charging",
+                    "interrupted": "Interrupted",
+                    "interrupted_fixed_mowing": "Interrupted fixed mowing",
+                    "turn_on_button": "Turn on button",
+                    "press_start": "Press start",
+                    "set_30_minute_timer": "Set 30 minute timer",
+                    "invalid_timer": "Invalid timer",
+                    "charging_current_low": "Charging current low",
+                    "caught_in_rain": "Caught in rain",
+                    "data_upload_failure": "Data upload failure",
+                    "continue": "Continue",
+                    "stopped": "Stopped",
+                    "ui_locked": "UI locked",
+                    "discharge_error": "Discharge error",
+                    "battery_overheated": "Battery overheated"
+                }
             },
             "work_log": {
                 "name": "Work log"

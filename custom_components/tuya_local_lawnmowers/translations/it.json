@@ -137,6 +137,12 @@
             },
             "query_zones": {
                 "name": "Controlla zone"
+            },
+            "start_docking": {
+                "name": "Avvia ritorno alla base"
+            },
+            "pause_mowing": {
+                "name": "Metti in pausa il taglio"
             }
         },
         "sensor": {
@@ -144,7 +150,36 @@
                 "name": "Batteria"
             },
             "problem": {
-                "name": "Problema"
+                "name": "Problema",
+                "state": {
+                    "ok": "OK",
+                    "tilted": "Inclinato",
+                    "steep": "Ripido",
+                    "raining": "Pioggia",
+                    "low_battery": "Batteria scarica",
+                    "weak_signal": "Segnale debole",
+                    "close_top_cover": "Chiudere il coperchio superiore",
+                    "docked": "In base",
+                    "undocked": "Fuori dalla base",
+                    "manually_dock": "Agganciare manualmente",
+                    "finished_fixed_mowing": "Taglio fisso completato",
+                    "disconnected": "Disconnesso",
+                    "paused_charging": "Carica in pausa",
+                    "interrupted": "Interrotto",
+                    "interrupted_fixed_mowing": "Taglio fisso interrotto",
+                    "turn_on_button": "Pulsante di accensione",
+                    "press_start": "Premere Avvia",
+                    "set_30_minute_timer": "Imposta timer di 30 minuti",
+                    "invalid_timer": "Timer non valido",
+                    "charging_current_low": "Corrente di carica bassa",
+                    "caught_in_rain": "Sorpreso dalla pioggia",
+                    "data_upload_failure": "Errore di caricamento dati",
+                    "continue": "Continua",
+                    "stopped": "Arrestato",
+                    "ui_locked": "Interfaccia bloccata",
+                    "discharge_error": "Errore di scarica",
+                    "battery_overheated": "Batteria surriscaldata"
+                }
             },
             "work_log": {
                 "name": "Registro attività"

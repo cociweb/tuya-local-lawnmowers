@@ -136,6 +136,12 @@
             },
             "query_zones": {
                 "name": "ゾーンを確認"
+            },
+            "start_docking": {
+                "name": "ドックへ戻る開始"
+            },
+            "pause_mowing": {
+                "name": "芝刈りを一時停止"
             }
         },
         "sensor": {
@@ -143,7 +149,36 @@
                 "name": "バッテリー"
             },
             "problem": {
-                "name": "問題"
+                "name": "問題",
+                "state": {
+                    "ok": "OK",
+                    "tilted": "傾斜",
+                    "steep": "急斜面",
+                    "raining": "雨天",
+                    "low_battery": "バッテリー残量低下",
+                    "weak_signal": "信号が弱い",
+                    "close_top_cover": "上部カバーを閉めてください",
+                    "docked": "ドック中",
+                    "undocked": "ドック外",
+                    "manually_dock": "手動でドック",
+                    "finished_fixed_mowing": "固定エリア芝刈り完了",
+                    "disconnected": "切断されました",
+                    "paused_charging": "充電一時停止",
+                    "interrupted": "中断されました",
+                    "interrupted_fixed_mowing": "固定芝刈り中断",
+                    "turn_on_button": "電源ボタンを押してください",
+                    "press_start": "開始を押してください",
+                    "set_30_minute_timer": "30分タイマーを設定",
+                    "invalid_timer": "無効なタイマー",
+                    "charging_current_low": "充電電流が低い",
+                    "caught_in_rain": "雨に遭遇",
+                    "data_upload_failure": "データアップロード失敗",
+                    "continue": "続行",
+                    "stopped": "停止",
+                    "ui_locked": "UI ロック",
+                    "discharge_error": "放電エラー",
+                    "battery_overheated": "バッテリー過熱"
+                }
             },
             "work_log": {
                 "name": "作業記録"

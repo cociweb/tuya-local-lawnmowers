@@ -136,6 +136,12 @@
             },
             "query_zones": {
                 "name": "Periksa Zona"
+            },
+            "start_docking": {
+                "name": "Mulai kembali ke stasiun dok"
+            },
+            "pause_mowing": {
+                "name": "Jeda pemotongan"
             }
         },
         "sensor": {
@@ -143,7 +149,36 @@
                 "name": "Baterai"
             },
             "problem": {
-                "name": "Masalah"
+                "name": "Masalah",
+                "state": {
+                    "ok": "OK",
+                    "tilted": "Miring",
+                    "steep": "Curam",
+                    "raining": "Hujan",
+                    "low_battery": "Baterai lemah",
+                    "weak_signal": "Sinyal lemah",
+                    "close_top_cover": "Tutup penutup atas",
+                    "docked": "Di dok",
+                    "undocked": "Di luar dok",
+                    "manually_dock": "Dok manual",
+                    "finished_fixed_mowing": "Pemotongan tetap selesai",
+                    "disconnected": "Terputus",
+                    "paused_charging": "Pengisian dijeda",
+                    "interrupted": "Terputus",
+                    "interrupted_fixed_mowing": "Pemotongan tetap terputus",
+                    "turn_on_button": "Tekan tombol daya",
+                    "press_start": "Tekan Mulai",
+                    "set_30_minute_timer": "Setel timer 30 menit",
+                    "invalid_timer": "Timer tidak valid",
+                    "charging_current_low": "Arus pengisian rendah",
+                    "caught_in_rain": "Kena hujan",
+                    "data_upload_failure": "Gagal mengunggah data",
+                    "continue": "Lanjutkan",
+                    "stopped": "Dihentikan",
+                    "ui_locked": "UI terkunci",
+                    "discharge_error": "Kesalahan pengosongan",
+                    "battery_overheated": "Baterai terlalu panas"
+                }
             },
             "work_log": {
                 "name": "Catatan Kerja"

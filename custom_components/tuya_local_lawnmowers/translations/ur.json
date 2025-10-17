@@ -138,6 +138,12 @@
             },
             "query_zones": {
                 "name": "زونز کی معلومات حاصل کریں"
+            },
+            "start_docking": {
+                "name": "بیس پر واپسی شروع کریں"
+            },
+            "pause_mowing": {
+                "name": "گھاس کاٹنا روکیں"
             }
         },
         "sensor": {
@@ -145,7 +151,36 @@
                 "name": "بیٹری"
             },
             "problem": {
-                "name": "مسئلہ"
+                "name": "مسئلہ",
+                "state": {
+                    "ok": "ٹھیک ہے",
+                    "tilted": "جھکا ہوا",
+                    "steep": "کھڑا ڈھلوان",
+                    "raining": "بارش ہو رہی ہے",
+                    "low_battery": "بیٹری کم ہے",
+                    "weak_signal": "کمزور سگنل",
+                    "close_top_cover": "اوپر کا کور بند کریں",
+                    "docked": "ڈوک کیا ہوا",
+                    "undocked": "ڈوک سے باہر",
+                    "manually_dock": "دستی طور پر ڈوک کریں",
+                    "finished_fixed_mowing": "مقررہ گھاس کاٹنا مکمل",
+                    "disconnected": "منقطع",
+                    "paused_charging": "چارجنگ روکی گئی",
+                    "interrupted": "معطل",
+                    "interrupted_fixed_mowing": "مقررہ گھاس کاٹنا معطل",
+                    "turn_on_button": "پاور بٹن دبائیں",
+                    "press_start": "اسٹارٹ دبائیں",
+                    "set_30_minute_timer": "30 منٹ کا ٹائمر سیٹ کریں",
+                    "invalid_timer": "غلط ٹائمر",
+                    "charging_current_low": "چارجنگ کرنٹ کم ہے",
+                    "caught_in_rain": "بارش میں پھنس گیا",
+                    "data_upload_failure": "ڈیٹا اپ لوڈ ناکام",
+                    "continue": "جاری رکھیں",
+                    "stopped": "روک دیا گیا",
+                    "ui_locked": "انٹرفیس مقفل",
+                    "discharge_error": "اخراج میں خرابی",
+                    "battery_overheated": "بیٹری زیادہ گرم ہو گئی"
+                }
             },
             "work_log": {
                 "name": "کام کا ریکارڈ"
