@@ -111,19 +111,19 @@
                     "returning": "Kembali",
                     "standby": "Siaga",
                     "charging": "Mengisi Daya",
-                    "manually stopped": "Dihentikan",
+                    "manually_stopped": "Dihentikan",
                     "locked": "Terkunci",
-                    "charging with queued task": "Mengisi Daya (tugas dalam antrian)",
-                    "fixed mowing": "Pemotongan Tetap"
+                    "charging_with_queued_task": "Mengisi Daya (tugas dalam antrian)",
+                    "fixed_mowing": "Pemotongan Tetap"
                 }
             },
             "commands": {
-                "start_mowing": "Mulai Memotong",
-                "pause": "Jeda",
-                "dock": "Tambat",
-                "fixed_mowing": "Pemotongan Tetap",
-                "cancel": "Batal",
-                "resume": "Lanjutkan"
+                "start_mowing": {"name": "Mulai Memotong"},
+                "pause": {"name": "Jeda"},
+                "dock": {"name": "Tambat"},
+                "fixed_mowing": {"name": "Pemotongan Tetap"},
+                "cancel": {"name": "Batal"},
+                "resume": {"name": "Lanjutkan"}
             }
         },
         "button": {
@@ -191,13 +191,13 @@
             "mowing_mode": {
                 "name": "Mode Pemotongan",
                 "state": {
-                    "Auto": "Otomatis",
-                    "Garden": "Taman"
+                    "auto": "Otomatis",
+                    "garden": "Taman"
                 }
             }
         }
     },
-    "service": {
+    "services": {
         "fixed_mowing": {
             "name": "Pemotongan Tetap",
             "description": "Mulai pemotong rumput dalam mode pemotongan tetap."

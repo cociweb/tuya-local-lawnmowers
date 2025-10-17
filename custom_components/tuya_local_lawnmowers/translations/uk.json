@@ -111,19 +111,19 @@
                     "returning": "Повернення",
                     "standby": "Очікування",
                     "charging": "Зарядка",
-                    "manually stopped": "Зупинено вручну",
+                    "manually_stopped": "Зупинено вручну",
                     "locked": "Заблоковано",
-                    "charging with queued task": "Зарядка (завдання в черзі)",
-                    "fixed mowing": "Фіксоване косіння"
+                    "charging_with_queued_task": "Зарядка (завдання в черзі)",
+                    "fixed_mowing": "Фіксоване косіння"
                 }
             },
             "commands": {
-                "start_mowing": "Почати косіння",
-                "pause": "Пауза",
-                "dock": "На базу",
-                "fixed_mowing": "Фіксоване косіння",
-                "cancel": "Скасувати",
-                "resume": "Продовжити"
+                "start_mowing": {"name": "Почати косіння"},
+                "pause": {"name": "Пауза"},
+                "dock": {"name": "На базу"},
+                "fixed_mowing": {"name": "Фіксоване косіння"},
+                "cancel": {"name": "Скасувати"},
+                "resume": {"name": "Продовжити"}
             }
         },
         "button": {
@@ -191,13 +191,13 @@
             "mowing_mode": {
                 "name": "Режим косіння",
                 "state": {
-                    "Auto": "Авто",
-                    "Garden": "Сад"
+                    "auto": "Авто",
+                    "garden": "Сад"
                 }
             }
         }
     },
-    "service": {
+    "services": {
         "fixed_mowing": {
             "name": "Фіксоване косіння",
             "description": "Запустити газонокосарку в режимі фіксованого косіння."

@@ -111,19 +111,19 @@
                     "returning": "Vrací se",
                     "standby": "Pohotovost",
                     "charging": "Dobíjí se",
-                    "manually stopped": "Zastaveno",
+                    "manually_stopped": "Zastaveno",
                     "locked": "Zamčeno",
-                    "charging with queued task": "Dobíjení (čekající úkol)",
-                    "fixed mowing": "Pevné sekání"
+                    "charging_with_queued_task": "Dobíjení (čekající úkol)",
+                    "fixed_mowing": "Pevné sekání"
                 }
             },
             "commands": {
-                "start_mowing": "Začít sekat",
-                "pause": "Pozastavit",
-                "dock": "Dokovat",
-                "fixed_mowing": "Pevné sekání",
-                "cancel": "Zrušit",
-                "resume": "Pokračovat"
+                "start_mowing": {"name": "Začít sekat"},
+                "pause": {"name": "Pozastavit"},
+                "dock": {"name": "Dokovat"},
+                "fixed_mowing": {"name": "Pevné sekání"},
+                "cancel": {"name": "Zrušit"},
+                "resume": {"name": "Pokračovat"}
             }
         },
         "button": {
@@ -191,13 +191,13 @@
             "mowing_mode": {
                 "name": "Režim sečení",
                 "state": {
-                    "Auto": "Automatický",
-                    "Garden": "Zahrada"
+                    "auto": "Automatický",
+                    "garden": "Zahrada"
                 }
             }
         }
     },
-    "service": {
+    "services": {
         "fixed_mowing": {
             "name": "Pevné sekání",
             "description": "Spustí sekačku v režimu pevného sekání."

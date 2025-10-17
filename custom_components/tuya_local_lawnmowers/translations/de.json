@@ -111,19 +111,19 @@
                     "returning": "Kehrt zurück",
                     "standby": "Bereitschaft",
                     "charging": "Lädt",
-                    "manually stopped": "Angehalten",
+                    "manually_stopped": "Angehalten",
                     "locked": "Gesperrt",
-                    "charging with queued task": "Lädt (Aufgabe in Warteschlange)",
-                    "fixed mowing": "Fixes Mähen"
+                    "charging_with_queued_task": "Lädt (Aufgabe in Warteschlange)",
+                    "fixed_mowing": "Fixes Mähen"
                 }
             },
             "commands": {
-                "start_mowing": "Mähen starten",
-                "pause": "Pause",
-                "dock": "Andocken",
-                "fixed_mowing": "Fixes Mähen",
-                "cancel": "Abbrechen",
-                "resume": "Fortsetzen"
+                "start_mowing": {"name": "Mähen starten"},
+                "pause": {"name": "Pause"},
+                "dock": {"name": "Andocken"},
+                "fixed_mowing": {"name": "Fixes Mähen"},
+                "cancel": {"name": "Abbrechen"},
+                "resume": {"name": "Fortsetzen"}
             }
         },
         "button": {
@@ -191,13 +191,13 @@
             "mowing_mode": {
                 "name": "Mähmodus",
                 "state": {
-                    "Auto": "Automatisch",
-                    "Garden": "Garten"
+                    "auto": "Automatisch",
+                    "garden": "Garten"
                 }
             }
         }
     },
-    "service": {
+    "services": {
         "fixed_mowing": {
             "name": "Fixes Mähen",
             "description": "Startet den Rasenmäher im Modus 'Fixes Mähen'."

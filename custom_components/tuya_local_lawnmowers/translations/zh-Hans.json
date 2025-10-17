@@ -111,19 +111,19 @@
                     "returning": "返回中",
                     "standby": "待机",
                     "charging": "充电中",
-                    "manually stopped": "已停止",
+                    "manually_stopped": "已停止",
                     "locked": "已锁定",
-                    "charging with queued task": "充电中(队列任务)",
-                    "fixed mowing": "固定区域割草"
+                    "charging_with_queued_task": "充电中(队列任务)",
+                    "fixed_mowing": "固定区域割草"
                 }
             },
             "commands": {
-                "start_mowing": "开始割草",
-                "pause": "暂停",
-                "dock": "返回基站",
-                "fixed_mowing": "固定区域割草",
-                "cancel": "取消",
-                "resume": "继续"
+                "start_mowing": {"name": "开始割草"},
+                "pause": {"name": "暂停"},
+                "dock": {"name": "返回基站"},
+                "fixed_mowing": {"name": "固定区域割草"},
+                "cancel": {"name": "取消"},
+                "resume": {"name": "继续"}
             }
         },
         "button": {
@@ -191,13 +191,13 @@
             "mowing_mode": {
                 "name": "割草模式",
                 "state": {
-                    "Auto": "自动",
-                    "Garden": "花园"
+                    "auto": "自动",
+                    "garden": "花园"
                 }
             }
         }
     },
-    "service": {
+    "services": {
         "fixed_mowing": {
             "name": "固定区域割草",
             "description": "以固定区域割草模式启动割草机。"

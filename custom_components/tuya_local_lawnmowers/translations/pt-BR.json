@@ -111,19 +111,19 @@
                     "returning": "Retornando",
                     "standby": "Em espera",
                     "charging": "Carregando",
-                    "manually stopped": "Parado",
-                    "locked": "Trancado",
-                    "charging with queued task": "Carregando (tarefa na fila)",
-                    "fixed mowing": "Corte fixo"
+                    "manually_stopped": "Parado manualmente",
+                    "locked": "Travado",
+                    "charging_with_queued_task": "Carregando (tarefa na fila)",
+                    "fixed_mowing": "Corte fixo"
                 }
             },
             "commands": {
-                "start_mowing": "Iniciar corte",
-                "pause": "Pausar",
-                "dock": "Retornar à base",
-                "fixed_mowing": "Corte fixo",
-                "cancel": "Cancelar",
-                "resume": "Retomar"
+                "start_mowing": {"name": "Iniciar corte"},
+                "pause": {"name": "Pausar"},
+                "dock": {"name": "Retornar à base"},
+                "fixed_mowing": {"name": "Corte fixo"},
+                "cancel": {"name": "Cancelar"},
+                "resume": {"name": "Retomar"}
             }
         },
         "button": {
@@ -191,24 +191,24 @@
             "mowing_mode": {
                 "name": "Modo de corte",
                 "state": {
-                    "Auto": "Automático",
-                    "Garden": "Jardim"
+                    "auto": "Automático",
+                    "garden": "Jardim"
                 }
             }
         }
     },
-    "service": {
+    "services": {
         "fixed_mowing": {
             "name": "Corte fixo",
-            "description": "Inicie o cortador de grama no modo de corte fixo."
+            "description": "Iniciar o cortador de grama no modo corte fixo."
         },
         "cancel": {
             "name": "Cancelar",
-            "description": "Cancele a operação atual."
+            "description": "Cancelar a operação atual."
         },
         "resume": {
             "name": "Retomar",
-            "description": "Retome o corte após uma pausa."
+            "description": "Retomar o corte após uma pausa."
         }
     }
 }

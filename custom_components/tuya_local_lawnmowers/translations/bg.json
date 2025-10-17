@@ -111,19 +111,19 @@
                     "returning": "Завръща се",
                     "standby": "В готовност",
                     "charging": "Зарежда се",
-                    "manually stopped": "Спрян ръчно",
+                    "manually_stopped": "Спрян ръчно",
                     "locked": "Заключен",
-                    "charging with queued task": "Зарежда се (има задача)",
-                    "fixed mowing": "Фиксирано косене"
+                    "charging_with_queued_task": "Зарежда се (има задача)",
+                    "fixed_mowing": "Фиксирано косене"
                 }
             },
             "commands": {
-                "start_mowing": "Започни косене",
-                "pause": "Пауза",
-                "dock": "Връщане в станцията",
-                "fixed_mowing": "Фиксирано косене",
-                "cancel": "Отказ",
-                "resume": "Продължи"
+                "start_mowing": {"name": "Започни косене"},
+                "pause": {"name": "Пауза"},
+                "dock": {"name": "Връщане в станцията"},
+                "fixed_mowing": {"name": "Фиксирано косене"},
+                "cancel": {"name": "Отказ"},
+                "resume": {"name": "Продължи"}
             }
         },
         "button": {
@@ -191,13 +191,13 @@
             "mowing_mode": {
                 "name": "Режим на косене",
                 "state": {
-                    "Auto": "Автоматичен",
-                    "Garden": "Градина"
+                    "auto": "Автоматичен",
+                    "garden": "Градина"
                 }
             }
         }
     },
-    "service": {
+    "services": {
         "fixed_mowing": {
             "name": "Фиксирано косене",
             "description": "Стартиране на косачката в режим на фиксирано косене."

@@ -113,19 +113,19 @@
                     "returning": "واپس آرہا ہے",
                     "standby": "تیار",
                     "charging": "چارج ہو رہا ہے",
-                    "manually stopped": "دستور بند کیا گیا",
+                    "manually_stopped": "دستور بند کیا گیا",
                     "locked": "لاک شدہ",
-                    "charging with queued task": "چارج ہو رہا ہے (کام قطار میں ہے)",
-                    "fixed mowing": "مقررہ گھاس کاٹنا"
+                    "charging_with_queued_task": "چارج ہو رہا ہے (کام قطار میں ہے)",
+                    "fixed_mowing": "مقررہ گھاس کاٹنا"
                 }
             },
             "commands": {
-                "start_mowing": "گھاس کاٹنا شروع کریں",
-                "pause": "روکیں",
-                "dock": "ڈوک کریں",
-                "fixed_mowing": "مقررہ گھاس کاٹنا",
-                "cancel": "منسوخ کریں",
-                "resume": "جاری رکھیں"
+                "start_mowing": {"name": "گھاس کاٹنا شروع کریں"},
+                "pause": {"name": "روکیں"},
+                "dock": {"name": "ڈوک کریں"},
+                "fixed_mowing": {"name": "مقررہ گھاس کاٹنا"},
+                "cancel": {"name": "منسوخ کریں"},
+                "resume": {"name": "جاری رکھیں"}
             }
         },
         "button": {
@@ -193,13 +193,13 @@
             "mowing_mode": {
                 "name": "گھاس کاٹنے کا موڈ",
                 "state": {
-                    "Auto": "خودکار",
-                    "Garden": "باغ"
+                    "auto": "خودکار",
+                    "garden": "باغ"
                 }
             }
         }
     },
-    "service": {
+    "services": {
         "fixed_mowing": {
             "name": "مقررہ گھاس کاٹنا",
             "description": "لاون موور کو مقررہ گھاس کاٹنے کے موڈ میں شروع کریں۔"

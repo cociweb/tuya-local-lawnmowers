@@ -111,19 +111,19 @@
                     "returning": "Se întoarce",
                     "standby": "În așteptare",
                     "charging": "Se încarcă",
-                    "manually stopped": "Oprit manual",
+                    "manually_stopped": "Oprit manual",
                     "locked": "Blocat",
-                    "charging with queued task": "Se încarcă (sarcină în așteptare)",
-                    "fixed mowing": "Tăiere fixă"
+                    "charging_with_queued_task": "Se încarcă (sarcină în așteptare)",
+                    "fixed_mowing": "Tăiere fixă"
                 }
             },
             "commands": {
-                "start_mowing": "Începe tăierea",
-                "pause": "Pauză",
-                "dock": "Înapoi la bază",
-                "fixed_mowing": "Tăiere fixă",
-                "cancel": "Anulează",
-                "resume": "Reia"
+                "start_mowing": {"name": "Începe tăierea"},
+                "pause": {"name": "Pauză"},
+                "dock": {"name": "Înapoi la bază"},
+                "fixed_mowing": {"name": "Tăiere fixă"},
+                "cancel": {"name": "Anulează"},
+                "resume": {"name": "Reia"}
             }
         },
         "button": {
@@ -191,13 +191,13 @@
             "mowing_mode": {
                 "name": "Mod tăiere",
                 "state": {
-                    "Auto": "Automat",
-                    "Garden": "Grădină"
+                    "auto": "Automat",
+                    "garden": "Grădină"
                 }
             }
         }
     },
-    "service": {
+    "services": {
         "fixed_mowing": {
             "name": "Tăiere fixă",
             "description": "Pornește mașina de tuns iarba în modul de tăiere fixă."

@@ -111,19 +111,19 @@
                     "returning": "Tornant",
                     "standby": "En espera",
                     "charging": "Carregant",
-                    "manually stopped": "Aturat",
+                    "manually_stopped": "Aturat",
                     "locked": "Bloquejat",
-                    "charging with queued task": "Carregant (tasca en cua)",
-                    "fixed mowing": "Tall fix"
+                    "charging_with_queued_task": "Carregant (tasca en cua)",
+                    "fixed_mowing": "Tall fix"
                 }
             },
             "commands": {
-                "start_mowing": "Comença a tallar",
-                "pause": "Pausa",
-                "dock": "Torna a la base",
-                "fixed_mowing": "Tall fix",
-                "cancel": "Cancel·la",
-                "resume": "Reprèn"
+                "start_mowing": {"name": "Comença a tallar"},
+                "pause": {"name": "Pausa"},
+                "dock": {"name": "Torna a la base"},
+                "fixed_mowing": {"name": "Tall fix"},
+                "cancel": {"name": "Cancel·la"},
+                "resume": {"name": "Reprèn"}
             }
         },
         "button": {
@@ -191,13 +191,13 @@
             "mowing_mode": {
                 "name": "Mode de tall",
                 "state": {
-                    "Auto": "Automàtic",
-                    "Garden": "Jardí"
+                    "auto": "Automàtic",
+                    "garden": "Jardí"
                 }
             }
         }
     },
-    "service": {
+    "services": {
         "fixed_mowing": {
             "name": "Tall fix",
             "description": "Inicia el tallacésped en mode de tall fix."

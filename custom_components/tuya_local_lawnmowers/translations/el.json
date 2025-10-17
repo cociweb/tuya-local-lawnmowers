@@ -111,19 +111,19 @@
                     "returning": "Επιστροφή",
                     "standby": "Αναμονή",
                     "charging": "Φόρτιση",
-                    "manually stopped": "Σταμάτησε",
+                    "manually_stopped": "Σταμάτησε",
                     "locked": "Κλειδωμένο",
-                    "charging with queued task": "Φόρτιση (εκκρεμής εργασία)",
-                    "fixed mowing": "Σταθερή κοπή"
+                    "charging_with_queued_task": "Φόρτιση (εκκρεμής εργασία)",
+                    "fixed_mowing": "Σταθερή κοπή"
                 }
             },
             "commands": {
-                "start_mowing": "Έναρξη κοπής",
-                "pause": "Παύση",
-                "dock": "Επιστροφή στη βάση",
-                "fixed_mowing": "Σταθερή κοπή",
-                "cancel": "Ακύρωση",
-                "resume": "Συνέχιση"
+                "start_mowing": {"name": "Έναρξη κοπής"},
+                "pause": {"name": "Παύση"},
+                "dock": {"name": "Επιστροφή στη βάση"},
+                "fixed_mowing": {"name": "Σταθερή κοπή"},
+                "cancel": {"name": "Ακύρωση"},
+                "resume": {"name": "Συνέχιση"}
             }
         },
         "button": {
@@ -191,13 +191,13 @@
             "mowing_mode": {
                 "name": "Λειτουργία κοπής",
                 "state": {
-                    "Auto": "Αυτόματο",
-                    "Garden": "Κήπος"
+                    "auto": "Αυτόματο",
+                    "garden": "Κήπος"
                 }
             }
         }
     },
-    "service": {
+    "services": {
         "fixed_mowing": {
             "name": "Σταθερή κοπή",
             "description": "Εκκίνηση του χορτοκοπτικού σε λειτουργία σταθερής κοπής."

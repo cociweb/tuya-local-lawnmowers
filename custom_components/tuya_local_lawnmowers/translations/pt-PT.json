@@ -111,19 +111,19 @@
                     "returning": "A regressar",
                     "standby": "Em espera",
                     "charging": "A carregar",
-                    "manually stopped": "Parado",
+                    "manually_stopped": "Parado",
                     "locked": "Bloqueado",
-                    "charging with queued task": "A carregar (tarefa em espera)",
-                    "fixed mowing": "Corte fixo"
+                    "charging_with_queued_task": "A carregar (tarefa em espera)",
+                    "fixed_mowing": "Corte fixo"
                 }
             },
             "commands": {
-                "start_mowing": "Iniciar corte",
-                "pause": "Pausar",
-                "dock": "Regressar à base",
-                "fixed_mowing": "Corte fixo",
-                "cancel": "Cancelar",
-                "resume": "Retomar"
+                "start_mowing": {"name": "Iniciar corte"},
+                "pause": {"name": "Pausar"},
+                "dock": {"name": "Regressar à base"},
+                "fixed_mowing": {"name": "Corte fixo"},
+                "cancel": {"name": "Cancelar"},
+                "resume": {"name": "Retomar"}
             }
         },
         "button": {
@@ -191,13 +191,13 @@
             "mowing_mode": {
                 "name": "Modo de corte",
                 "state": {
-                    "Auto": "Automático",
-                    "Garden": "Jardim"
+                    "auto": "Automático",
+                    "garden": "Jardim"
                 }
             }
         }
     },
-    "service": {
+    "services": {
         "fixed_mowing": {
             "name": "Corte fixo",
             "description": "Iniciar o corta-relva em modo de corte fixo."

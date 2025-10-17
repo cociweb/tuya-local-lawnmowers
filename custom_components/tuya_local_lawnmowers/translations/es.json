@@ -111,19 +111,19 @@
                     "returning": "Volviendo",
                     "standby": "En espera",
                     "charging": "Cargando",
-                    "manually stopped": "Detenido",
+                    "manually_stopped": "Detenido",
                     "locked": "Bloqueado",
-                    "charging with queued task": "Cargando (tarea en cola)",
-                    "fixed mowing": "Corte fijo"
+                    "charging_with_queued_task": "Cargando (tarea en cola)",
+                    "fixed_mowing": "Corte fijo"
                 }
             },
             "commands": {
-                "start_mowing": "Comenzar a cortar",
-                "pause": "Pausar",
-                "dock": "Volver a la base",
-                "fixed_mowing": "Corte fijo",
-                "cancel": "Cancelar",
-                "resume": "Reanudar"
+                "start_mowing": {"name": "Comenzar a cortar"},
+                "pause": {"name": "Pausar"},
+                "dock": {"name": "Volver a la base"},
+                "fixed_mowing": {"name": "Corte fijo"},
+                "cancel": {"name": "Cancelar"},
+                "resume": {"name": "Reanudar"}
             }
         },
         "button": {
@@ -191,13 +191,13 @@
             "mowing_mode": {
                 "name": "Modo de corte",
                 "state": {
-                    "Auto": "Automático",
-                    "Garden": "Jardín"
+                    "auto": "Automático",
+                    "garden": "Jardín"
                 }
             }
         }
     },
-    "service": {
+    "services": {
         "fixed_mowing": {
             "name": "Corte fijo",
             "description": "Iniciar el cortacésped en modo de corte fijo."

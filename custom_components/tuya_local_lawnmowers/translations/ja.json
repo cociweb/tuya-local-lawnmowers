@@ -111,19 +111,19 @@
                     "returning": "帰還中",
                     "standby": "待機中",
                     "charging": "充電中",
-                    "manually stopped": "手動停止中",
-                    "locked": "ロック済み",
-                    "charging with queued task": "充電中（キューにタスクあり）",
-                    "fixed mowing": "固定芝刈り"
+                    "manually_stopped": "手動停止",
+                    "locked": "ロック中",
+                    "charging_with_queued_task": "充電中（キュー待ちタスクあり）",
+                    "fixed_mowing": "固定エリア芝刈り"
                 }
             },
             "commands": {
-                "start_mowing": "芝刈りを開始",
-                "pause": "一時停止",
-                "dock": "ドックに戻る",
-                "fixed_mowing": "固定芝刈り",
-                "cancel": "キャンセル",
-                "resume": "再開"
+                "start_mowing": {"name": "芝刈り開始"},
+                "pause": {"name": "一時停止"},
+                "dock": {"name": "ドックへ戻る"},
+                "fixed_mowing": {"name": "固定エリア芝刈り"},
+                "cancel": {"name": "キャンセル"},
+                "resume": {"name": "再開"}
             }
         },
         "button": {
@@ -191,16 +191,16 @@
             "mowing_mode": {
                 "name": "芝刈りモード",
                 "state": {
-                    "Auto": "自動",
-                    "Garden": "庭"
+                    "auto": "自動",
+                    "garden": "ガーデン"
                 }
             }
         }
     },
-    "service": {
+    "services": {
         "fixed_mowing": {
-            "name": "固定芝刈り",
-            "description": "芝刈り機を固定芝刈りモードで開始します。"
+            "name": "固定エリア芝刈り",
+            "description": "芝刈り機を固定エリア芝刈りモードで起動します。"
         },
         "cancel": {
             "name": "キャンセル",
@@ -208,7 +208,7 @@
         },
         "resume": {
             "name": "再開",
-            "description": "一時停止後、芝刈りを再開します。"
+            "description": "一時停止後に芝刈りを再開します。"
         }
     }
 }

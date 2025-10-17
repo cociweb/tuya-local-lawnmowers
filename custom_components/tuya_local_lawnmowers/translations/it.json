@@ -112,19 +112,19 @@
                     "returning": "Ritorno",
                     "standby": "In attesa",
                     "charging": "In carica",
-                    "manually stopped": "Fermato",
+                    "manually_stopped": "Fermato",
                     "locked": "Bloccato",
-                    "charging with queued task": "In carica (attività in coda)",
-                    "fixed mowing": "Taglio fisso"
+                    "charging_with_queued_task": "In carica (attività in coda)",
+                    "fixed_mowing": "Taglio fisso"
                 }
             },
             "commands": {
-                "start_mowing": "Avvia taglio",
-                "pause": "Pausa",
-                "dock": "Torna alla base",
-                "fixed_mowing": "Taglio fisso",
-                "cancel": "Annulla",
-                "resume": "Riprendi"
+                "start_mowing": {"name": "Avvia taglio"},
+                "pause": {"name": "Pausa"},
+                "dock": {"name": "Torna alla base"},
+                "fixed_mowing": {"name": "Taglio fisso"},
+                "cancel": {"name": "Annulla"},
+                "resume": {"name": "Riprendi"}
             }
         },
         "button": {
@@ -192,13 +192,13 @@
             "mowing_mode": {
                 "name": "Modalità taglio",
                 "state": {
-                    "Auto": "Automatico",
-                    "Garden": "Giardino"
+                    "auto": "Automatico",
+                    "garden": "Giardino"
                 }
             }
         }
     },
-    "service": {
+    "services": {
         "fixed_mowing": {
             "name": "Taglio fisso",
             "description": "Avvia il tosaerba in modalità taglio fisso."

@@ -112,19 +112,19 @@
                     "returning": "Visszatér",
                     "standby": "Készenlét",
                     "charging": "Töltés",
-                    "manually stopped": "Leállítva",
+                    "manually_stopped": "Leállítva",
                     "locked": "Zárolva",
-                    "charging with queued task": "Töltés (függő feladat)",
-                    "fixed mowing": "Fixpontos nyírás"
+                    "charging_with_queued_task": "Töltés (függő feladat)",
+                    "fixed_mowing": "Fixpontos nyírás"
                 }
             },
             "commands": {
-                "start_mowing": "Fűnyírás indítása",
-                "pause": "Szünet",
-                "dock": "Dokkolás",
-                "fixed_mowing": "Fix fűnyírás",
-                "cancel": "Megszakítás",
-                "resume": "Folytatás"
+                "start_mowing": {"name": "Fűnyírás indítása"},
+                "pause": {"name": "Szünet"},
+                "dock": {"name": "Dokkolás"},
+                "fixed_mowing": {"name": "Fix fűnyírás"},
+                "cancel": {"name": "Megszakítás"},
+                "resume": {"name": "Folytatás"}
             }
         },
         "button": {
@@ -192,13 +192,13 @@
             "mowing_mode": {
                 "name": "Fűnyírás módja",
                 "state": {
-                    "Auto": "Automatikus",
-                    "Garden": "Kert"
+                    "auto": "Automatikus",
+                    "garden": "Kert"
                 }
             }
         }
     },
-    "service": {
+    "services": {
         "fixed_mowing": {
             "name": "Fixpontos nyírás",
             "description": "A fűnyíró fixpontos üzemmódjának indítása."

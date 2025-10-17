@@ -111,19 +111,19 @@
                     "returning": "Returning",
                     "standby": "Standby",
                     "charging": "Charging",
-                    "manually stopped": "Stopped",
+                    "manually_stopped": "Stopped",
                     "locked": "Locked",
-                    "charging with queued task": "Charging (queued task)",
-                    "fixed mowing": "Fixed mowing"
+                    "charging_with_queued_task": "Charging (queued task)",
+                    "fixed_mowing": "Fixed mowing"
                 }
             },
             "commands": {
-                "start_mowing": "Start mowing",
-                "pause": "Pause",
-                "dock": "Dock",
-                "fixed_mowing": "Fixed mowing",
-                "cancel": "Cancel",
-                "resume": "Resume"
+                "start_mowing": {"name": "Start mowing"},
+                "pause": {"name": "Pause"},
+                "dock": {"name": "Dock"},
+                "fixed_mowing": {"name": "Fixed mowing"},
+                "cancel": {"name": "Cancel"},
+                "resume": {"name": "Resume"}
             }
         },
         "button": {
@@ -191,13 +191,13 @@
             "mowing_mode": {
                 "name": "Mowing mode",
                 "state": {
-                    "Auto": "Automatic",
-                    "Garden": "Garden"
+                    "auto": "Automatic",
+                    "garden": "Garden"
                 }
             }
         }
     },
-    "service": {
+    "services": {
         "fixed_mowing": {
             "name": "Fixed mowing",
             "description": "Start the lawn mower in fixed mowing mode."

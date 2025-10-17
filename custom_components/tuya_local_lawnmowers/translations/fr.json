@@ -111,19 +111,19 @@
                     "returning": "Retour",
                     "standby": "Veille",
                     "charging": "En charge",
-                    "manually stopped": "Arrêté",
+                    "manually_stopped": "Arrêté",
                     "locked": "Verrouillé",
-                    "charging with queued task": "Charge (tâche en attente)",
-                    "fixed mowing": "Tonte fixe"
+                    "charging_with_queued_task": "Charge (tâche en attente)",
+                    "fixed_mowing": "Tonte fixe"
                 }
             },
             "commands": {
-                "start_mowing": "Démarrer la tonte",
-                "pause": "Pause",
-                "dock": "Retour à la base",
-                "fixed_mowing": "Tonte fixe",
-                "cancel": "Annuler",
-                "resume": "Reprendre"
+                "start_mowing": {"name": "Démarrer la tonte"},
+                "pause": {"name": "Pause"},
+                "dock": {"name": "Retour à la base"},
+                "fixed_mowing": {"name": "Tonte fixe"},
+                "cancel": {"name": "Annuler"},
+                "resume": {"name": "Reprendre"}
             }
         },
         "button": {
@@ -191,13 +191,13 @@
             "mowing_mode": {
                 "name": "Mode de tonte",
                 "state": {
-                    "Auto": "Automatique",
-                    "Garden": "Jardin"
+                    "auto": "Automatique",
+                    "garden": "Jardin"
                 }
             }
         }
     },
-    "service": {
+    "services": {
         "fixed_mowing": {
             "name": "Tonte fixe",
             "description": "Démarrer la tondeuse en mode tonte fixe."

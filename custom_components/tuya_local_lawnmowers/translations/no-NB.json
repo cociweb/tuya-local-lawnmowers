@@ -112,19 +112,19 @@
                     "returning": "Returnerer",
                     "standby": "Klar",
                     "charging": "Lader",
-                    "manually stopped": "Stoppet",
+                    "manually_stopped": "Stoppet",
                     "locked": "Låst",
-                    "charging with queued task": "Lader (oppgave i kø)",
-                    "fixed mowing": "Fast klippeområde"
+                    "charging_with_queued_task": "Lader (oppgave i kø)",
+                    "fixed_mowing": "Fast klippeområde"
                 }
             },
             "commands": {
-                "start_mowing": "Start klipping",
-                "pause": "Pause",
-                "dock": "Til dokk",
-                "fixed_mowing": "Fast klippeområde",
-                "cancel": "Avbryt",
-                "resume": "Fortsett"
+                "start_mowing": {"name": "Start klipping"},
+                "pause": {"name": "Pause"},
+                "dock": {"name": "Til dokk"},
+                "fixed_mowing": {"name": "Fast klippeområde"},
+                "cancel": {"name": "Avbryt"},
+                "resume": {"name": "Fortsett"}
             }
         },
         "button": {
@@ -192,13 +192,13 @@
             "mowing_mode": {
                 "name": "Klippemodus",
                 "state": {
-                    "Auto": "Auto",
-                    "Garden": "Hage"
+                    "auto": "Auto",
+                    "garden": "Hage"
                 }
             }
         }
     },
-    "service": {
+    "services": {
         "fixed_mowing": {
             "name": "Fast klippeområde",
             "description": "Start gressklipperen i fast klippeområde-modus."

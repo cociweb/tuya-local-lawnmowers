@@ -111,19 +111,19 @@
                     "returning": "Powrót",
                     "standby": "Czuwanie",
                     "charging": "Ładowanie",
-                    "manually stopped": "Zatrzymany",
+                    "manually_stopped": "Zatrzymany",
                     "locked": "Zablokowany",
-                    "charging with queued task": "Ładowanie (zadanie w kolejce)",
-                    "fixed mowing": "Stałe koszenie"
+                    "charging_with_queued_task": "Ładowanie (zadanie w kolejce)",
+                    "fixed_mowing": "Stałe koszenie"
                 }
             },
             "commands": {
-                "start_mowing": "Rozpocznij koszenie",
-                "pause": "Wstrzymaj",
-                "dock": "Dokuj",
-                "fixed_mowing": "Stałe koszenie",
-                "cancel": "Anuluj",
-                "resume": "Wznów"
+                "start_mowing": {"name": "Rozpocznij koszenie"},
+                "pause": {"name": "Wstrzymaj"},
+                "dock": {"name": "Dokuj"},
+                "fixed_mowing": {"name": "Stałe koszenie"},
+                "cancel": {"name": "Anuluj"},
+                "resume": {"name": "Wznów"}
             }
         },
         "button": {
@@ -191,13 +191,13 @@
             "mowing_mode": {
                 "name": "Tryb koszenia",
                 "state": {
-                    "Auto": "Automatyczny",
-                    "Garden": "Ogród"
+                    "auto": "Automatyczny",
+                    "garden": "Ogród"
                 }
             }
         }
     },
-    "service": {
+    "services": {
         "fixed_mowing": {
             "name": "Stałe koszenie",
             "description": "Uruchom kosiarkę w trybie stałego koszenia."
