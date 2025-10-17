@@ -191,7 +191,7 @@
             "mowing_mode": {
                 "name": "Mowing mode",
                 "state": {
-                    "Auto": "Auto",
+                    "Auto": "Automatic",
                     "Garden": "Garden"
                 }
             }

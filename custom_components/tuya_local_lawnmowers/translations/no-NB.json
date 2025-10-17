@@ -105,63 +105,63 @@
             "activity": {
                 "name": "Status",
                 "state": {
-                    "docked": "Docked",
-                    "mowing": "Mowing",
-                    "paused": "Paused",
-                    "error": "Error",
-                    "returning": "Returning",
-                    "standby": "Standby",
-                    "charging": "Charging",
-                    "manually stopped": "Stopped",
-                    "locked": "Locked",
-                    "charging with queued task": "Charging (queued task)",
-                    "fixed mowing": "Fixed mowing"
+                    "docked": "I dokk",
+                    "mowing": "Klipper gress",
+                    "paused": "Pauset",
+                    "error": "Feil",
+                    "returning": "Returnerer",
+                    "standby": "Klar",
+                    "charging": "Lader",
+                    "manually stopped": "Stoppet",
+                    "locked": "Låst",
+                    "charging with queued task": "Lader (oppgave i kø)",
+                    "fixed mowing": "Fast klippeområde"
                 }
             },
             "commands": {
-                "start_mowing": "Start mowing",
+                "start_mowing": "Start klipping",
                 "pause": "Pause",
-                "dock": "Dock",
-                "fixed_mowing": "Fixed mowing",
-                "cancel": "Cancel",
-                "resume": "Resume"
+                "dock": "Til dokk",
+                "fixed_mowing": "Fast klippeområde",
+                "cancel": "Avbryt",
+                "resume": "Fortsett"
             }
         },
         "button": {
             "start_fixed_mowing": {
-                "name": "Start fixed mowing"
+                "name": "Start fast klippeområde"
             },
             "cancel_mowing": {
-                "name": "Cancel mowing"
+                "name": "Avbryt klipping"
             },
             "continue_mowing": {
-                "name": "Continue mowing"
+                "name": "Fortsett klipping"
             },
             "clear_schedule": {
-                "name": "Clear schedule"
+                "name": "Tøm timeplan"
             },
             "query_schedule": {
-                "name": "Query schedule"
+                "name": "Spør timeplan"
             },
             "query_zones": {
-                "name": "Query zones"
+                "name": "Spør soner"
             }
         },
         "sensor": {
             "battery": {
-                "name": "Battery"
+                "name": "Batteri"
             },
             "problem": {
                 "name": "Problem"
             },
             "work_log": {
-                "name": "Work log"
+                "name": "Arbeidslogg"
             },
             "zones": {
-                "name": "Zones"
+                "name": "Soner"
             },
             "schedule": {
-                "name": "Schedule"
+                "name": "Timeplan"
             }
         },
         "binary_sensor": {
@@ -169,47 +169,47 @@
                 "name": "Problem"
             },
             "cover": {
-                "name": "Cover"
+                "name": "Dekkel"
             }
         },
         "switch": {
             "rain_mode": {
-                "name": "Rain mode"
+                "name": "Regnmodus"
             },
             "hedgehog_protection": {
-                "name": "Hedgehog protection"
+                "name": "Pinnsvinbeskyttelse"
             },
             "backward_blade_stop": {
-                "name": "Backward blade stop"
+                "name": "Stopp ved bakoverkjøring"
             }
         },
         "number": {
             "running_time": {
-                "name": "Running time"
+                "name": "Kjøretid"
             }
         },
         "select": {
             "mowing_mode": {
-                "name": "Mowing mode",
+                "name": "Klippemodus",
                 "state": {
                     "Auto": "Auto",
-                    "Garden": "Garden"
+                    "Garden": "Hage"
                 }
             }
         }
     },
     "service": {
         "fixed_mowing": {
-            "name": "Fixed mowing",
-            "description": "Start the lawn mower in fixed mowing mode."
+            "name": "Fast klippeområde",
+            "description": "Start gressklipperen i fast klippeområde-modus."
         },
         "cancel": {
-            "name": "Cancel",
-            "description": "Cancel the current operation."
+            "name": "Avbryt",
+            "description": "Avbryt gjeldende operasjon."
         },
         "resume": {
-            "name": "Resume",
-            "description": "Resume mowing after a pause."
+            "name": "Fortsett",
+            "description": "Fortsett klipping etter en pause."
         }
     }
 }
