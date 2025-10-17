@@ -1,31 +1,89 @@
-# Home Assistant Tuya Local Lawnmowers component
+# Home Assistant Tuya Local Lawnmowers Integration
 
-Please report any [issues](https://github.com/cociweb/tuya-local-lawnmowers/issues) and feel free to raise [pull requests](https://github.com/cociweb/tuya-local-lawnmowers/pulls).
-[Many others](https://github.com/cociweb/tuya-local-lawnmowers/blob/main/ACKNOWLEDGEMENTS.md) have contributed their help already.
+[![HACS Custom](https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge)](https://github.com/hacs/integration)
 
-[![BuyMeCoffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/jasonrumney)
+This is a Home Assistant integration for controlling **Tuya-based robotic lawn mowers** over your local network, without relying on the Tuya cloud. It is designed specifically for lawn mower models using Tuya firmware, providing fast, reliable, and private local control.
 
-This is a Home Assistant integration to support devices running Tuya
-firmware without going via the Tuya cloud.  Devices are supported
-over WiFi, limited support for devices connected via hubs is available.
+- **Project repo:** [tuya-local-lawnmowers](https://github.com/cociweb/tuya-local-lawnmowers)
+- **Issue tracker:** [issues](https://github.com/cociweb/tuya-local-lawnmowers/issues)
+- **Acknowledgements:** See [ACKNOWLEDGEMENTS.md](https://github.com/cociweb/tuya-local-lawnmowers/blob/main/ACKNOWLEDGEMENTS.md)
 
-Note that many Tuya devices seem to support only one local connection.
-If you have connection issues when using this integration, ensure that
-other integrations offering local Tuya connections are not configured
-to use the same device, mobile applications on devices on the local
-network are closed, and no other software is trying to connect locally
-to your Tuya devices.
+---
 
-Using this integration does not stop your devices from sending status
-to the Tuya cloud, so this should not be seen as a security measure,
-rather it improves speed and reliability by using local connections,
-and may unlock some features of your device, or even unlock whole
-devices, that are not supported by the Tuya cloud API.
+## Features
 
-A similar but unrelated integration is
-[rospogrigio/localtuya](https://github.com/rospogrigio/localtuya/), if
-your device is not supported by this integration, you may find it
-easier to set up using that as an alternative.
+- Start, stop, dock, and schedule your Tuya-based lawn mower from Home Assistant
+- Real-time status updates (battery, error, mowing state, etc.)
+- Support for multiple mower models (see [DEVICES.md](https://github.com/cociweb/tuya-local-lawnmowers/blob/main/DEVICES.md))
+- Local-only operation: no cloud dependency
+- Easy setup via Home Assistant UI
+
+---
+
+## Supported Devices
+
+See [DEVICES.md](https://github.com/cociweb/tuya-local-lawnmowers/blob/main/DEVICES.md) for a list of supported lawn mower models. If your mower is not listed, you can request support by filing a GitHub issue with details (model, brand, and Home Assistant logs).
+
+---
+
+## Installation
+
+### HACS (Recommended)
+
+1. Go to HACS in Home Assistant.
+2. Add this repo as a custom repository: `https://github.com/cociweb/tuya-local-lawnmowers`
+3. Search for "Tuya Local Lawnmowers" and install.
+4. Restart Home Assistant.
+
+### Manual
+
+1. Download the latest release from [GitHub Releases](https://github.com/cociweb/tuya-local-lawnmowers/releases/latest).
+2. Copy the `custom_components/tuya_local_lawnmowers` folder into your Home Assistant `custom_components` directory.
+3. Restart Home Assistant.
+
+---
+
+## Configuration
+
+1. Go to **Settings > Devices & Services** in Home Assistant.
+2. Click **Add Integration** and search for "Tuya Local Lawnmowers".
+3. Follow the prompts to add your mower.
+   - You can use cloud-assisted setup (recommended) or manual configuration (see [DEVICE_DETAILS.md](DEVICE_DETAILS.md)).
+4. Assign a name and complete the setup.
+
+---
+
+## Troubleshooting & FAQ
+
+- **Connection Issues:**
+  - Ensure only one system/app is connected to the mower at a time.
+  - Make sure your mower and Home Assistant are on the same network.
+  - If setup fails, check Home Assistant logs for error messages and refer to [DEVICE_DETAILS.md](DEVICE_DETAILS.md).
+
+- **Not Supported?**
+  - Submit an issue with your mower's details and logs.
+
+- **Offline Operation:**
+  - Some features may be unavailable if the mower is powered off or out of WiFi range.
+
+---
+
+## Contributing
+
+- See [DEVICES.md](https://github.com/cociweb/tuya-local-lawnmowers/blob/main/DEVICES.md) for adding new mower models.
+- Pull requests are welcome! Please include device details and test results.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+## Acknowledgements
+
+Thanks to all contributors and users who have helped improve this integration. See [ACKNOWLEDGEMENTS.md](https://github.com/cociweb/tuya-local-lawnmowers/blob/main/ACKNOWLEDGEMENTS.md) for more.
 
 
 ---
@@ -139,31 +197,19 @@ The first stage of configuration is to provide the information needed to connect
 
 When using the cloud assisted config, the device id and local key will be pre-filled from the cloud, and the IP address will also be filled if local discovery is not blocked by other integrations or a complex network setup. Otherwise, see [DEVICE_DETAILS.md](DEVICE_DETAILS.md) for instructions on how to find the info.
 
-#### host
+| Option            | Type           | Required | Description |
+|-------------------|----------------|----------|-------------|
+| `host`            | string         | Yes      | IP address or hostname of the mower |
+| `device_id`       | string         | Yes      | Device ID of the mower |
+| `local_key`       | string         | Yes      | Local key obtained for the mower |
+| `protocol_version`| string/float   | Yes      | Protocol version ("auto", 3.1, 3.2, 3.3, 3.4, 3.5, 3.22) |
 
-&nbsp;&nbsp;&nbsp;&nbsp;_(string) (Required)_ IP or hostname of the device.
+**Note:** Each time you pair the device, the local key changes. If you obtained the local key using the instructions below, then re-paired with your manufacturer's app, the key will have changed already.
 
-#### device_id
+**protocol_version details:**
+Valid options are "auto", 3.1, 3.2, 3.3, 3.4, 3.5, 3.22. If you aren't sure, choose "auto", but some 3.2, 3.22 and maybe 3.4 devices may be misdetected as 3.3 (or vice-versa). If your device does not seem to respond to commands reliably, try selecting between those protocol versions. Protocol 3.22 is a special case that enables tinytuya's "device22" detection with protocol 3.3. Previously we let tinytuya auto-detect this, but it was found to sometimes misdetect genuine 3.3 devices as device22 which stops them receiving updates, so an explicit version was added to enable the device22 detection.
 
-&nbsp;&nbsp;&nbsp;&nbsp;_(string) (Required)_ Device ID retrieved
-
-#### local_key
-
-&nbsp;&nbsp;&nbsp;&nbsp;_(string) (Required)_ Local key retrieved
-
-Note that each time you pair the device, the local key changes, so if you obtained the local key using the instructions below, then re-paired with your manufacturer's app, then the key will have changed already.
-
-#### protocol_version
-
-&nbsp;&nbsp;&nbsp;&nbsp;_(string or float) (Required)_ Valid options are "auto", 3.1, 3.2, 3.3, 3.4, 3.5, 3.22.  If you aren't sure, choose "auto", but some 3.2, 3.22 and maybe 3.4 devices may be misdetected as 3.3 (or vice-versa), so if your device does not seem to respond to commands reliably, try selecting between those protocol versions. Protocol 3.22 is a special case, that enables tinytuya's "device22" detection with protocol 3.3. Previously we let tinytuya auto-detect this, but it was found to sometimes misdetect genuine 3.3 devices as device22 which stops them receiving updates, so an explicit version was added to enable the device22 detection.
-
-At the end of this step, an attempt is made to connect to the device and see if
-it returns any data. For tuya protocol version 3.1 devices, the local key is
-only used for sending commands to the device, so if your local key is
-incorrect the setup will appear to work, and you will not see any problems
-until you try to control your device.  For more recent Tuya protocol versions,
-the local key is used to decrypt received data as well, so an incorrect key
-will be detected at this step and cause an immediate failure.
+At the end of this step, an attempt is made to connect to the device and see if it returns any data. For Tuya protocol version 3.1 devices, the local key is only used for sending commands to the device, so if your local key is incorrect the setup will appear to work, and you will not see any problems until you try to control your device. For more recent Tuya protocol versions, the local key is used to decrypt received data as well, so an incorrect key will be detected at this step and cause an immediate failure.
 
 
 ### Stage Two
@@ -172,30 +218,23 @@ The second stage of configuration is to select which device you are connecting.
 The list of devices offered will be limited to devices which appear to be
 at least a partial match to the data returned by the device.
 
-#### type
+| Option | Type   | Required | Description |
+|--------|--------|----------|-------------|
+| `type` | string | Optional | The type of Tuya lawn mower device. Select from the available options. |
 
-&nbsp;&nbsp;&nbsp;&nbsp;_(string) (Optional)_ The type of Tuya device.
-Select from the available options.
+The list presented is filtered to exclude devices that definitely do not match among the supported devices. If a device config you expected is not shown, you may have a different firmware version, so the best way to report this is as a new device.
 
-The list presented is filtered to exclude devices that definitely do not match among the 1000+ supported devices. If a device config you expected is not shown, you may have a different firmware version, so the best way to report this is as a new device.
-
-If you pick the wrong type, you will need to delete the device and set
-it up again. This is because different types of devices create different
-entities, so changing the device type without deleting everything is
-not advisable.
+If you pick the wrong type, you will need to delete the device and set it up again. This is because different types of devices create different entities, so changing the device type without deleting everything is not advisable.
 
 ### Stage Three
 
 The final stage is to choose a name for the device in Home Assistant.
 
-If you have multiple devices of the same type, you may want to change
-the name to make it easier to distinguish them.
+If you have multiple devices of the same type, you may want to change the name to make it easier to distinguish them.
 
-#### name
-
-&nbsp;&nbsp;&nbsp;&nbsp;_(string) (Required)_ Any unique name for the
-device.  This will be used as the base for the entity names in Home
-Assistant.
+| Option | Type   | Required | Description |
+|--------|--------|----------|-------------|
+| `name` | string | Yes      | Any unique name for the device. This will be used as the base for the entity names in Home Assistant. |
 
 ## Offline operation issues
 
