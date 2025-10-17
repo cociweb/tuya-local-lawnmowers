@@ -1,0 +1,23 @@
+cancel:
+  name: Cancel
+  description: Cancel the current mowing task.
+  target:
+    entity:
+      integration: tuya_local_lawnmowers
+      domain: lawn_mower
+
+resume:
+  name: Resume
+  description: Resume the current mowing task.
+  target:
+    entity:
+      integration: tuya_local_lawnmowers
+      domain: lawn_mower
+      
+fixed_mowing:
+  name: Fixed Mowing
+  description: Start a fixed mowing task.
+  target:
+    entity:
+      integration: tuya_local_lawnmowers
+      domain: lawn_mower

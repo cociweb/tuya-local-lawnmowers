@@ -17,6 +17,8 @@ from homeassistant.components.lawn_mower.const import (
 from homeassistant.components.lawn_mower.const import (
     LawnMowerEntityFeature as BaseFeature,
 )
+from homeassistant.helpers import entity_platform
+from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
 from .device import TuyaLocalDevice
 from .entity import TuyaLocalEntity
@@ -87,8 +89,11 @@ class ExtendedLawnMowerEntityFeature(IntFlag):
         return cls(features)
 
 
-async def async_setup_entry(hass, config_entry, async_add_entities):
+async def async_setup_entry(
+    hass, config_entry, async_add_entities: AddEntitiesCallback
+) -> None:
     config = {**config_entry.data, **config_entry.options}
+
     await async_tuya_setup_platform(
         hass,
         async_add_entities,
@@ -100,6 +105,16 @@ async def async_setup_entry(hass, config_entry, async_add_entities):
 
 class TuyaLocalLawnMower(TuyaLocalEntity, LawnMowerEntity):
     """Representation of a Tuya Lawn Mower"""
+
+    async def async_added_to_hass(self):
+        await super().async_added_to_hass()
+        platform = entity_platform.async_get_current_platform()
+
+        platform.async_register_entity_service(SERVICE_CANCEL, {}, "async_cancel")
+        platform.async_register_entity_service(SERVICE_RESUME, {}, "async_resume")
+        platform.async_register_entity_service(
+            SERVICE_FIXED_MOWING, {}, "async_fixed_mowing"
+        )
 
     def __init__(self, device: TuyaLocalDevice, config: TuyaEntityConfig):
         """
