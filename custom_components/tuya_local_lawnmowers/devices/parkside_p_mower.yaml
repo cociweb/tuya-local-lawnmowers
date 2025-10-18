@@ -177,6 +177,7 @@ entities:
         name: error_log
         optional: true
   - entity: sensor
+    name: Problem
     translation_key: problem
     icon: "mdi:robot-mower-outline"
     icon_priority: 2
@@ -295,6 +296,16 @@ entities:
         range:
           min: 1
           max: 24
+  - entity: button
+    translation_key: clear_schedule
+    name: Clear schedule
+    icon: "mdi:calendar-remove"
+    category: config
+    dps:
+      - id: 107
+        type: boolean
+        name: button
+        optional: true
   - entity: button
     translation_key: query_schedule
     name: Query schedule
