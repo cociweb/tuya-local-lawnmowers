@@ -5,7 +5,6 @@ products:
     model: S20
 entities:
   - entity: lawn_mower
-    translation_key: activity
     dps:
       - id: 101
         name: activity
