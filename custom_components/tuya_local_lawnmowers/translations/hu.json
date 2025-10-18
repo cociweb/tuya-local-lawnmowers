@@ -154,7 +154,7 @@
                 "state": {
                     "ok": "OK",
                     "tilted": "Megemelt",
-                    "steep": "Fényes",
+                    "steep": "Meredek",
                     "raining": "Esik",
                     "low_battery": "Alacsony akkumulátor",
                     "weak_signal": "Gyenge Jel",
