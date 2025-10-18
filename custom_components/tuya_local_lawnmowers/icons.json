@@ -44,32 +44,32 @@
             "problem": {
                 "default": "mdi:robot-mower-outline",
                 "state": {
-                    "Tilted": "mdi:angle-acute",
-                    "Steep": "mdi:slope-uphill",
-                    "Raining": "mdi:weather-pouring",
-                    "Low battery": "mdi:battery-low",
-                    "Weak signal": "mdi:signal-cellular-1",
-                    "Close top cover": "mdi:door-open",
-                    "Docked": "mdi:mower",
-                    "Undocked": "mdi:mower-on",
-                    "Manually dock": "mdi:home-alert",
-                    "Finished fixed mowing": "mdi:check-circle-outline",
-                    "Disconnected": "mdi:power-plug-off",
-                    "Paused charging": "mdi:battery-clock",
-                    "Interrupted": "mdi:pause-circle-outline",
-                    "Interrupted fixed mowing": "mdi:pause-circle-outline",
-                    "Press power button": "mdi:power",
-                    "Press start": "mdi:play-circle-outline",
-                    "Set 30 minute timer": "mdi:timer",
-                    "Invalid timer": "mdi:timer-off",
-                    "Charging current low": "mdi:alert-circle-outline",
-                    "Caught in rain": "mdi:weather-rainy",
-                    "Data upload failure": "mdi:cloud-upload-off",
-                    "Continue": "mdi:play",
-                    "Stopped": "mdi:stop-circle-outline",
-                    "UI locked": "mdi:lock",
-                    "Discharge error": "mdi:alert-circle",
-                    "Battery overheated": "mdi:thermometer-high"
+                    "tilted": "mdi:angle-acute",
+                    "steep": "mdi:slope-uphill",
+                    "raining": "mdi:weather-pouring",
+                    "low_battery": "mdi:battery-low",
+                    "weak_signal": "mdi:signal-cellular-1",
+                    "close_top_cover": "mdi:door-open",
+                    "docked": "mdi:mower",
+                    "undocked": "mdi:mower-on",
+                    "manually_dock": "mdi:home-alert",
+                    "finished_fixed_mowing": "mdi:check-circle-outline",
+                    "disconnected": "mdi:power-plug-off",
+                    "paused_charging": "mdi:battery-clock",
+                    "interrupted": "mdi:pause-circle-outline",
+                    "interrupted_fixed_mowing": "mdi:pause-circle-outline",
+                    "press_power_button": "mdi:power",
+                    "press_start": "mdi:play-circle-outline",
+                    "set_30_minute_timer": "mdi:timer",
+                    "invalid_timer": "mdi:timer-off",
+                    "charging_current_low": "mdi:alert-circle-outline",
+                    "caught_in_rain": "mdi:weather-rainy",
+                    "data_upload_failure": "mdi:cloud-upload-off",
+                    "continue": "mdi:play",
+                    "stopped": "mdi:stop-circle-outline",
+                    "ui_locked": "mdi:lock",
+                    "discharge_error": "mdi:alert-circle",
+                    "battery_overheated": "mdi:thermometer-high"
                 }
             },
             "work_log": {
@@ -94,24 +94,13 @@
                     "docked": "mdi:robot-mower-outline",
                     "mowing": "mdi:robot-mower",
                     "charging": "mdi:robot-mower-outline",
-                    "manually stopped": "mdi:alert-decagram",
+                    "manually_stopped": "mdi:alert-decagram",
                     "locked": "mdi:lock-alert",
                     "paused": "mdi:robot-mower-outline",
                     "returning": "mdi:robot-mower",
                     "error": "mdi:alert-circle"
                 }
             }
-        }
-    },
-    "services": {
-        "cancel": {
-            "default": "mdi:stop"
-        },
-        "resume": {
-            "default": "mdi:play"
-        },
-        "fixed_mowing": {
-            "default": "mdi:map-marker-radius"
         }
     }
 }
