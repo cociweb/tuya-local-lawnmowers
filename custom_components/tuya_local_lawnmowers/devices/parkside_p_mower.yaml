@@ -154,6 +154,7 @@ entities:
         class: measurement
   - entity: binary_sensor
     translation_key: problem
+    name: Problem
     class: problem
     category: diagnostic
     dps:
