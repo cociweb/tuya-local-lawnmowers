@@ -315,16 +315,6 @@ class TuyaEntityConfig:
         own_name = self._config.get("name")
         if own_name:
             return f"{self.entity}_{slugify(own_name)}"
-        if self.translation_key:
-            slug = f"{self.entity}_{self.translation_key}"
-            for key, value in self.translation_placeholders.items():
-                if key in slug:
-                    slug = slug.replace(key, slugify(value))
-                else:
-                    slug = f"{slug}_{value}"
-            return slug
-        elif self.device_class:
-            return f"{self.entity}_{self.device_class}"
         return self.entity
 
     @property

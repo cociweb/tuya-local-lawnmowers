@@ -201,6 +201,11 @@ class TuyaLocalLawnMower(TuyaLocalEntity, LawnMowerEntity):
         """Return the status of the lawn mower."""
         return ExtendedLawnMowerActivity(self._activity_dp.get_value(self._device))
 
+    @property
+    def state(self):
+        """Return the main state for Home Assistant frontend/cards."""
+        return str(self.activity) if self.activity is not None else None
+
     async def async_start_mowing(self) -> None:
         """Start mowing the lawn."""
         if self._command_dp:

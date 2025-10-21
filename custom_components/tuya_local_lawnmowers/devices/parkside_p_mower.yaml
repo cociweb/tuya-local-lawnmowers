@@ -5,6 +5,7 @@ products:
     model: PMRDA 20-Li
 entities:
   - entity: lawn_mower
+    translation_key: activity
     dps:
       - id: 101
         name: activity
