@@ -75,6 +75,7 @@ entities:
     name: Start mowing
     translation_key: start_mowing
     icon: "mdi:play"
+    class: none
     dps:
       - id: 115
         type: string
@@ -87,6 +88,7 @@ entities:
     name: Start fixed mowing
     translation_key: start_fixed_mowing
     icon: "mdi:map-marker-radius"
+    class: none
     dps:
       - id: 115
         type: string
@@ -99,6 +101,7 @@ entities:
     translation_key: pause_mowing
     name: Pause mowing
     icon: "mdi:pause"
+    class: none
     dps:
       - id: 115
         type: string
@@ -111,6 +114,7 @@ entities:
     translation_key: cancel_mowing
     name: Cancel mowing
     icon: "mdi:stop"
+    class: none
     dps:
       - id: 115
         type: string
@@ -123,6 +127,7 @@ entities:
     translation_key: start_docking
     name: Start docking
     icon: "mdi:home"
+    class: none
     dps:
       - id: 115
         type: string
@@ -135,6 +140,7 @@ entities:
     translation_key: continue_mowing
     name: Continue mowing
     icon: "mdi:play"
+    class: none
     dps:
       - id: 115
         type: string
@@ -302,6 +308,7 @@ entities:
     name: Clear schedule
     icon: "mdi:calendar-remove"
     category: config
+    class: none
     dps:
       - id: 107
         type: boolean
@@ -312,6 +319,7 @@ entities:
     name: Query schedule
     icon: "mdi:calendar-refresh"
     category: config
+    class: none
     dps:
       - id: 108
         type: boolean
@@ -322,6 +330,7 @@ entities:
     name: Query zones
     icon: "mdi:map-search"
     category: config
+    class: none
     dps:
       - id: 109
         type: boolean
