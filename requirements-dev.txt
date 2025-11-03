@@ -1,7 +1,7 @@
 fuzzywuzzy
 levenshtein
 homeassistant>=2023.12.0  # Minimum version with good component support
-pytest-homeassistant-custom-component==0.13.287
+pytest-homeassistant-custom-component==0.13.291
 pytest
 pytest-asyncio
 pytest-cov
