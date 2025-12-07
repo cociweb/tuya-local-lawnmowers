@@ -136,14 +136,12 @@ class TuyaDeviceConfig:
             # primary entity is a deprecated fallback, so if it is
             # missing, we need to log a warning about the missing entities
             # list.
-            _LOGGER.error(f"{self.config_type}.yaml does not define an entities list.")
+            _LOGGER.error("%s.yaml does not define an entities list.", self.config_type)
             return TuyaEntityConfig(self, self._config["entities"][0])
         if not self._reported_deprecated_primary:
-            _LOGGER.warning(
-                f"{self.config_type}.yaml distinguishes between primary"
+            _LOGGER.warning("%s.yaml distinguishes between primary"
                 " and secondary_entities. This is deprecated, please"
-                " modify it to use a single list."
-            )
+                " modify it to use a single list.", self.config_type)
             self._reported_deprecated_primary = True
 
         return TuyaEntityConfig(self, self._config["primary_entity"])
@@ -312,9 +310,21 @@ class TuyaEntityConfig:
     @property
     def config_id(self):
         """The identifier for this entity in the config."""
-        own_name = self._config.get("name")
-        if own_name:
-            return f"{self.entity}_{slugify(own_name)}"
+        if self.translation_key:
+            slug = f"{self.entity}_{self.translation_key}"
+            for key, value in self.translation_placeholders.items():
+                if key in slug:
+                    slug = slug.replace(key, slugify(value))
+                else:
+                    slug = f"{slug}_{value}"
+            return slug
+        elif self.translation_only_key:
+            return f"{self.entity}"
+        elif self._config.get("name"):
+            return f"{self.entity}_{slugify(self._config.get('name'))}"
+            #return f"{self.entity}"
+        elif self.device_class:
+            return f"{self.entity}_{self.device_class}"
         return self.entity
 
     @property

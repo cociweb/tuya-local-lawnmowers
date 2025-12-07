@@ -78,7 +78,6 @@ entities:
     translation_key: start_fixed_mowing
     name: Start fixed mowing
     icon: "mdi:mower-on"
-    class: none
     dps:
       - id: 115
         type: string
@@ -91,7 +90,6 @@ entities:
     translation_key: cancel_mowing
     name: Cancel mowing
     icon: "mdi:mower"
-    class: none
     dps:
       - id: 115
         type: string
@@ -104,7 +102,6 @@ entities:
     translation_key: continue_mowing
     name: Continue mowing
     icon: "mdi:mower-on"
-    class: none
     dps:
       - id: 115
         type: string
@@ -263,7 +260,6 @@ entities:
     name: Clear schedule
     icon: "mdi:calendar-remove"
     category: config
-    class: none
     dps:
       - id: 107
         type: boolean
@@ -274,7 +270,6 @@ entities:
     name: Query schedule
     icon: "mdi:calendar-refresh"
     category: config
-    class: none
     dps:
       - id: 108
         type: boolean
@@ -285,7 +280,6 @@ entities:
     name: Query zones
     icon: "mdi:map-search"
     category: config
-    class: none
     dps:
       - id: 109
         type: boolean
