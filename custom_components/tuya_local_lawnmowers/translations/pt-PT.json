@@ -102,7 +102,6 @@
     "entity": {
         "lawn_mower": {
             "activity": {
-                "name": "Estado",
                 "state": {
                     "docked": "Na base",
                     "mowing": "A cortar relva",
@@ -142,13 +141,16 @@
             },
             "pause_mowing": {
                 "name": "Pausar corte"
+            },
+            "start_mowing": {
+                "name":"Corte fixo"
             }
         },
         "sensor": {
             "battery": {
                 "name": "Bateria"
             },
-            "problem": {
+            "problem_state": {
                 "name": "Problema",
                 "state": {
                     "ok": "OK",

@@ -103,7 +103,6 @@
     "entity": {
         "lawn_mower": {
             "activity": {
-                "name": "Állapot",
                 "state": {
                     "docked": "Dokkolva",
                     "mowing": "Fűnyírás",
@@ -143,13 +142,16 @@
             },
             "pause_mowing": {
                 "name": "Fűnyírás szünetel"
+            },
+            "start_mowing": {
+                "name": "Fűnyírás indítása"
             }
-        },
+    },
         "sensor": {
             "battery": {
                 "name": "Akkumulátor"
             },
-            "problem": {
+            "problem_state": {
                 "name": "Probléma",
                 "state": {
                     "ok": "OK",

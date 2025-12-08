@@ -102,7 +102,6 @@
     "entity": {
         "lawn_mower": {
             "activity": {
-                "name": "状態",
                 "state": {
                     "docked": "ドック済み",
                     "mowing": "芝刈り中",
@@ -142,13 +141,16 @@
             },
             "pause_mowing": {
                 "name": "芝刈りを一時停止"
+            },
+            "start_mowing": {
+                "name": "芝刈りを開始"
             }
         },
         "sensor": {
             "battery": {
                 "name": "バッテリー"
             },
-            "problem": {
+            "problem_state": {
                 "name": "問題",
                 "state": {
                     "ok": "OK",

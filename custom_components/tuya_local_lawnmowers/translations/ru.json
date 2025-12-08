@@ -102,7 +102,6 @@
     "entity": {
         "lawn_mower": {
             "activity": {
-                "name": "Status",
                 "state": {
                     "docked": "Docked",
                     "mowing": "Mowing",
@@ -142,13 +141,16 @@
             },
             "pause_mowing": {
                 "name": "Pause mowing"
+            },
+            "start_mowing": {
+                "name": "Start mowing"
             }
         },
         "sensor": {
             "battery": {
                 "name": "Battery"
             },
-            "problem": {
+            "problem_state": {
                 "name": "Problem",
                 "state": {
                     "ok": "OK",

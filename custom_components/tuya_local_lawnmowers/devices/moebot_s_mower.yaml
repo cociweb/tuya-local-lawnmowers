@@ -5,7 +5,7 @@ products:
     model: S20
 entities:
   - entity: lawn_mower
-    translation_key: activity
+    translation_only_key: activity
     dps:
       - id: 101
         name: activity
@@ -76,9 +76,7 @@ entities:
         optional: true
   - entity: button
     translation_key: start_fixed_mowing
-    name: Start fixed mowing
     icon: "mdi:mower-on"
-    class: none
     dps:
       - id: 115
         type: string
@@ -89,9 +87,7 @@ entities:
             value: true
   - entity: button
     translation_key: cancel_mowing
-    name: Cancel mowing
     icon: "mdi:mower"
-    class: none
     dps:
       - id: 115
         type: string
@@ -102,9 +98,7 @@ entities:
             value: true
   - entity: button
     translation_key: continue_mowing
-    name: Continue mowing
     icon: "mdi:mower-on"
-    class: none
     dps:
       - id: 115
         type: string
@@ -124,7 +118,6 @@ entities:
         class: measurement
   - entity: binary_sensor
     translation_key: problem
-    name: Problem
     class: problem
     category: diagnostic
     dps:
@@ -148,8 +141,7 @@ entities:
         name: error_log
         optional: true
   - entity: sensor
-    translation_key: problem
-    name: Problem
+    translation_key: problem_state
     icon: "mdi:robot-mower-outline"
     icon_priority: 2
     class: enum
@@ -165,80 +157,79 @@ entities:
           - dps_val: null
             value: OK
           - dps_val: MOWER_LEAN
-            value: Tilted
+            value: tilted
             icon: "mdi:angle-acute"
           - dps_val: MOWER_STEEP
-            value: Steep
+            value: steep
             icon: "mdi:slope-uphill"
           - dps_val: RAIN_PARK
-            value: Raining
+            value: raining
             icon: "mdi:weather-pouring"
           - dps_val: BATTERY_NOT_ENOUGH
-            value: Low battery
+            value: low battery
             icon: "mdi:battery-low"
           - dps_val: NO_LOOP_SIGNAL
-            value: Weak signal
+            value: weak signal
             icon: "mdi:signal-cellular-1"
           - dps_val: CLOSE_TOPCOVER
-            value: Close top cover
+            value: close top cover
             icon: "mdi:door-open"
           - dps_val: MOWER_IN_STATION
-            value: Docked
+            value: docked
             icon: "mdi:mower"
           - dps_val: MOWER_OUT_STATION
-            value: Undocked
+            value: undocked
             icon: "mdi:mower-on"
           - dps_val: PLACE_INSIDE_STATION
-            value: Manually dock
+            value: manually dock
             icon: "mdi:home-alert"
           - dps_val: FIXED_END
-            value: Finished fixed mowing
+            value: finished fixed mowing
             icon: "mdi:mower"
           - dps_val: CHARGING_DISCONNECT
-            value: Disconnected
+            value: disconnected
             icon: "mdi:power-plug-battery"
           - dps_val: CHARGING_PAUSE
-            value: Paused charging
+            value: paused charging
             icon: "mdi:battery-clock"
           - dps_val: WORK_INTERRUPT
-            value: Interrupted
+            value: interrupted
             icon: "mdi:alert-octogon"
           - dps_val: FIXED_MOWING_INTERRUPT
-            value: Interrupted fixed mowing
+            value: interrupted fixed mowing
             icon: "mdi:alert-octogon"
           - dps_val: TURN_ON_BUTTON
-            value: Turn on button
+            value: turn on button
             icon: "mdi:button-pointer"
           - dps_val: PRESS_START_KEY
-            value: Press start
+            value: press start
             icon: "mdi:play"
           - dps_val: TIMESET_30MIN
-            value: Set 30 minute timer
+            value: set 30 minute timer
             icon: "mdi:fast-forward-30"
           - dps_val: TIMESET_UNLEGAL
-            value: Invalid timer
+            value: invalid timer
             icon: "mdi:timer-alert"
           - dps_val: CHARGR_CURRENT_LOW
-            value: Charging current low
+            value: charging current low
             icon: "mdi:flash-alert"
           - dps_val: RAIN_OUT_STATION
-            value: Caught in rain
+            value: caught in rain
             icon: "mdi:weather-pouring"
           - dps_val: UPDATA_FAIL
-            value: Data upload failure
+            value: data upload failure
             icon: "mdi:cloud-alert"
           - dps_val: CONTINUE_TOOLTIP
-            value: Continue
+            value: continue
             icon: "mdi:step-forward"
           - dps_val: MOWER_EMERGENCY
-            value: Stopped
+            value: stopped
             icon: "mdi:octagon"
           - dps_val: MOWER_UI_LOCKED
-            value: UI locked
+            value: ui locked
             icon: "mdi:hand-back-right-off"
   - entity: switch
     translation_key: rain_mode
-    name: Rain mode
     icon: "mdi:weather-pouring"
     category: config
     dps:
@@ -247,7 +238,6 @@ entities:
         name: switch
   - entity: number
     translation_key: running_time
-    name: Running time
     category: config
     icon: "mdi:clock"
     dps:
@@ -260,10 +250,8 @@ entities:
           max: 24
   - entity: button
     translation_key: clear_schedule
-    name: Clear schedule
     icon: "mdi:calendar-remove"
     category: config
-    class: none
     dps:
       - id: 107
         type: boolean
@@ -271,10 +259,8 @@ entities:
         optional: true
   - entity: button
     translation_key: query_schedule
-    name: Query schedule
     icon: "mdi:calendar-refresh"
     category: config
-    class: none
     dps:
       - id: 108
         type: boolean
@@ -282,10 +268,8 @@ entities:
         optional: true
   - entity: button
     translation_key: query_zones
-    name: Query zones
     icon: "mdi:map-search"
     category: config
-    class: none
     dps:
       - id: 109
         type: boolean
@@ -293,7 +277,6 @@ entities:
         optional: true
   - entity: select
     translation_key: mowing_mode
-    name: Mowing mode
     icon: "mdi:mower"
     category: config
     dps:
@@ -303,12 +286,11 @@ entities:
         optional: true
         mapping:
           - dps_val: AutoMode
-            value: Auto
+            value: auto
           - dps_val: GardenMode
-            value: Garden
+            value: garden
   - entity: binary_sensor
     translation_key: cover
-    name: Cover
     category: diagnostic
     dps:
       - id: 116
@@ -317,7 +299,6 @@ entities:
         optional: true
   - entity: switch
     translation_key: hedgehog_protection
-    name: Hedgehog protection
     icon: "mdi:account-group"
     category: config
     dps:
@@ -327,7 +308,6 @@ entities:
         optional: true
   - entity: switch
     translation_key: backward_blade_stop
-    name: Backward blade stop
     icon: "mdi:saw-blade"
     category: config
     hidden: unavailable

@@ -102,7 +102,6 @@
     "entity": {
         "lawn_mower": {
             "activity": {
-                "name": "状态",
                 "state": {
                     "docked": "已停靠",
                     "mowing": "割草中",
@@ -142,13 +141,16 @@
             },
             "pause_mowing": {
                 "name": "暂停割草"
+            },
+            "start_mowing": {
+                "name": "开始割草"
             }
         },
         "sensor": {
             "battery": {
                 "name": "电池"
             },
-            "problem": {
+            "problem_state": {
                 "name": "问题",
                 "state": {
                     "ok": "正常",
