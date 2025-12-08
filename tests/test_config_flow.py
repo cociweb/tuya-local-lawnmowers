@@ -471,7 +471,7 @@ async def test_flow_choose_entities_init(hass):
     assert "lawn_mower" not in result["data"]
     assert "sensor_battery" not in result["data"]
     assert "binary_sensor_problem" not in result["data"]
-    assert "sensor_problem" not in result["data"]
+    assert "sensor_problem_state" not in result["data"]
 
 
 @pytest.mark.asyncio
@@ -544,7 +544,7 @@ async def test_flow_choose_entities_creates_config_entry(mock_test, hass, bypass
     assert "lawn_mower" not in data
     assert "sensor_battery" not in data
     assert "binary_sensor_problem" not in data
-    assert "sensor_problem" not in data
+    assert "sensor_problem_state" not in data
 
 
 @pytest.mark.asyncio

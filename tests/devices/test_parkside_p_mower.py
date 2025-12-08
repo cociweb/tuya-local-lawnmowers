@@ -42,7 +42,7 @@ class TestParksidePMower(TuyaDeviceTestCase):
                 "binary_sensor_cover",
                 "binary_sensor_problem",
                 "select_mowing_mode",
-                "sensor_problem",
+                "sensor_problem_state",
                 "switch_backward_blade_stop",
                 "switch_rain_mode",
                 "number_running_time",
