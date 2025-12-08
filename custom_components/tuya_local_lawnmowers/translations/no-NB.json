@@ -103,7 +103,6 @@
     "entity": {
         "lawn_mower": {
             "activity": {
-                "name": "Status",
                 "state": {
                     "docked": "I dokk",
                     "mowing": "Klipper gress",
@@ -143,13 +142,16 @@
             },
             "pause_mowing": {
                 "name": "Sett klipping på pause"
+            },
+            "start_mowing": {
+                "name": "Start klipping"
             }
         },
         "sensor": {
             "battery": {
                 "name": "Batteri"
             },
-            "problem": {
+            "problem_state": {
                 "name": "Problem",
                 "state": {
                     "ok": "OK",

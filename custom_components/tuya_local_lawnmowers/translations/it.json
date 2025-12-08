@@ -103,7 +103,6 @@
     "entity": {
         "lawn_mower": {
             "activity": {
-                "name": "Stato",
                 "state": {
                     "docked": "In base",
                     "mowing": "In taglio",
@@ -143,13 +142,16 @@
             },
             "pause_mowing": {
                 "name": "Metti in pausa il taglio"
+            },
+            "start_mowing": {
+                "name": "Avvia taglio"
             }
         },
         "sensor": {
             "battery": {
                 "name": "Batteria"
             },
-            "problem": {
+            "problem_state": {
                 "name": "Problema",
                 "state": {
                     "ok": "OK",

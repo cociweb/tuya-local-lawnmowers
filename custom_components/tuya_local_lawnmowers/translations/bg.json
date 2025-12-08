@@ -102,7 +102,6 @@
     "entity": {
         "lawn_mower": {
             "activity": {
-                "name": "Състояние",
                 "state": {
                     "docked": "В зарядна станция",
                     "mowing": "Коси",
@@ -142,13 +141,16 @@
             },
             "pause_mowing": {
                 "name": "Пауза на косенето"
+            },
+            "start_mowing": {
+                "name": "Фиксирано косене"
             }
         },
         "sensor": {
             "battery": {
                 "name": "Акумулатор"
             },
-            "problem": {
+            "problem_state": {
                 "name": "Проблем",
                 "state": {
                     "ok": "OK",

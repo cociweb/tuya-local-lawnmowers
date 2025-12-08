@@ -104,7 +104,6 @@
     "entity": {
         "lawn_mower": {
             "activity": {
-                "name": "حالت",
                 "state": {
                     "docked": "ڈوک کیا ہوا",
                     "mowing": "گھاس کاٹ رہا ہے",
@@ -144,13 +143,16 @@
             },
             "pause_mowing": {
                 "name": "گھاس کاٹنا روکیں"
+            },
+            "start_mowing": {
+                "name": "گھاس کاٹنا شروع کریں"
             }
         },
         "sensor": {
             "battery": {
                 "name": "بیٹری"
             },
-            "problem": {
+            "problem_state": {
                 "name": "مسئلہ",
                 "state": {
                     "ok": "ٹھیک ہے",

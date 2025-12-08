@@ -102,7 +102,6 @@
     "entity": {
         "lawn_mower": {
             "activity": {
-                "name": "Estat",
                 "state": {
                     "docked": "A la base",
                     "mowing": "Tallant",
@@ -142,13 +141,16 @@
             },
             "pause_mowing": {
                 "name": "Posar en pausa el tall"
+            },
+            "start_mowing": {
+                "name": "Inicia el tall"
             }
         },
         "sensor": {
             "battery": {
                 "name": "Bateria"
             },
-            "problem": {
+            "problem_state": {
                 "name": "Problema",
                 "state": {
                     "ok": "OK",

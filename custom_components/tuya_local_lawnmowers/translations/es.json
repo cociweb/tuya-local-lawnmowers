@@ -142,13 +142,16 @@
             },
             "pause_mowing": {
                 "name": "Pausar corte"
+            },
+            "start_mowing": {
+                "name":"Corte fijo"
             }
         },
         "sensor": {
             "battery": {
                 "name": "Batería"
             },
-            "problem": {
+            "problem_state": {
                 "name": "Problema",
                 "state": {
                     "ok": "OK",
