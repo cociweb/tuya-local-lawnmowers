@@ -102,5 +102,17 @@
                 }
             }
         }
+    },
+    "services": {
+        "cancel": {
+            "service": "mdi:stop"
+        },
+        "resume": {
+            "service": "mdi:play-pause"
+        },
+        "fixed_mowing": {
+            "service": "mdi:map-marker-radius"
+        }
     }
 }
+
