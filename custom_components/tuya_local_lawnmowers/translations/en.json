@@ -30,11 +30,11 @@
             },
             "search": {
                 "title": "Locate the device IP address",
-                "description": "Tuya cloud does not provide local IP addresses so we must now search your local network to find the device. This takes up to 20 seconds.\n\nIf unsuccessful you will need to provide the IP address yourself some other way such as from router DHCP assignment.\n\nFor this step and the following device addition to succeed you must shut down the mobile app or its connections to the device will often block Tuya Local Lawnmowers communication with them."
+                "description": "Tuya cloud does not provide local IP addresses so we must now search your local network to find the device. This takes up to 20 seconds.\n\nIf unsuccessful, you will need to provide the IP address yourself some other way such as from router DHCP assignment.\n\nFor this step and the following device addition to succeed you must shut down the mobile app or its connections to the device will often block Tuya Local Lawnmowers communication with them."
             },
             "local": {
                 "title": "Configure your Tuya Local Lawnmowers device",
-                "description": "Follow these instructions to find your device id and local key. [%{helper_find_device_id}](https://github.com/cociweb/tuya-local-lawnmowers#finding-your-device-id-and-local-key)",
+                "description": "Follow these instructions to find your device id and local key.",
                 "data": {
                     "host": "IP address or hostname",
                     "device_id": "Device ID (or the hub's Device ID for devices connected via gateway)",
@@ -83,7 +83,7 @@
         "step": {
             "user": {
                 "title": "Configure your Tuya Local Lawnmowers device",
-                "description": "Follow these instructions to find your device id and local key. [%{helper_find_device_id}](https://github.com/cociweb/tuya-local-lawnmowers#finding-your-device-id-and-local-key)",
+                "description": "Follow these instructions to find your device id and local key.",
                 "data": {
                     "host": "IP address or hostname",
                     "local_key": "Local key",
