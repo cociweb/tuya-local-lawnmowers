@@ -7,6 +7,6 @@ pytest-asyncio
 pytest-cov
 ruff
 tinytuya~=1.19.0
-tuya-device-sharing-sdk~=0.2.11
+tuya-device-sharing-sdk~=0.2.13
 yamllint
 
